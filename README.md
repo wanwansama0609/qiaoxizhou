@@ -8,6 +8,8 @@
 
 ## 上传与发布
 
+**固定使用 `E:\个人网站\QiaoxiZhou`。该目录已经是 Git 仓库，无需再新建仓库或同名子文件夹。**
+
 详细步骤见 [部署说明](./部署说明.md)。
 
 1. 在 GitHub Desktop 中选择现有仓库 **QiaoxiZhou**。如果尚未添加，使用 **File → Add local repository** 添加 `E:\个人网站\QiaoxiZhou`。
