@@ -1,0 +1,314 @@
+[
+  {
+    "id": "cs2",
+    "sourcePage": "https://store.steampowered.com/app/730/",
+    "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg",
+    "file": "/media/games/cs2-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official Steam capsule artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "apex",
+    "sourcePage": "https://store.steampowered.com/app/1172470/",
+    "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/1172470/capsule_616x353.jpg",
+    "file": "/media/games/apex-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official Steam capsule artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "dread-hunger",
+    "sourcePage": "https://store.steampowered.com/app/1418630/",
+    "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/1418630/capsule_616x353.jpg",
+    "file": "/media/games/dread-hunger-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official Steam capsule artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "among-us",
+    "sourcePage": "https://store.steampowered.com/app/945360/",
+    "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/945360/capsule_616x353.jpg",
+    "file": "/media/games/among-us-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official Steam capsule artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "balatro",
+    "sourcePage": "https://store.steampowered.com/app/2379780/",
+    "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/2379780/capsule_616x353.jpg",
+    "file": "/media/games/balatro-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official Steam capsule artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "black-myth-wukong",
+    "sourcePage": "https://store.steampowered.com/app/2358720/",
+    "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/2358720/capsule_616x353.jpg",
+    "file": "/media/games/black-myth-wukong-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official Steam capsule artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "it-takes-two",
+    "sourcePage": "https://store.steampowered.com/app/1426210/",
+    "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/1426210/capsule_616x353.jpg",
+    "file": "/media/games/it-takes-two-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official Steam capsule artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "split-fiction",
+    "sourcePage": "https://store.steampowered.com/app/2001120/",
+    "imageUrl": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2001120/5a3209f496e911ff2fa6dccd58c682c89632d09b/capsule_616x353.jpg?t=1763484567",
+    "file": "/media/games/split-fiction-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official Steam capsule artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "portal-2",
+    "sourcePage": "https://store.steampowered.com/app/620/",
+    "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/620/capsule_616x353.jpg",
+    "file": "/media/games/portal-2-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official Steam capsule artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "overcooked-2",
+    "sourcePage": "https://store.steampowered.com/app/728880/",
+    "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/728880/capsule_616x353.jpg",
+    "file": "/media/games/overcooked-2-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official Steam capsule artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "detroit",
+    "sourcePage": "https://store.steampowered.com/app/1222140/",
+    "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/1222140/capsule_616x353.jpg",
+    "file": "/media/games/detroit-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official Steam capsule artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "undertale",
+    "sourcePage": "https://store.steampowered.com/app/391540/",
+    "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/391540/capsule_616x353.jpg",
+    "file": "/media/games/undertale-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official Steam capsule artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "we-were-here",
+    "sourcePage": "https://store.steampowered.com/app/1341290/",
+    "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/1341290/capsule_616x353.jpg",
+    "file": "/media/games/we-were-here-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official Steam capsule artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "ace-attorney",
+    "sourcePage": "https://store.steampowered.com/app/787480/",
+    "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/787480/capsule_616x353.jpg",
+    "file": "/media/games/ace-attorney-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official Steam capsule artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "yangtze-river",
+    "sourcePage": "https://store.steampowered.com/app/1746030/",
+    "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/1746030/capsule_616x353.jpg",
+    "file": "/media/games/yangtze-river-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official Steam capsule artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "fall-guys",
+    "sourcePage": "https://store.steampowered.com/app/1097150/",
+    "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/1097150/capsule_616x353.jpg",
+    "file": "/media/games/fall-guys-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official Steam capsule artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "valorant",
+    "sourcePage": "https://playvalorant.com/en-us/",
+    "imageUrl": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/1d62a3751be9d7abfce84da8ca89be7d79f07fed-1232x1232.png?accountingTag=VAL",
+    "file": "/media/games/valorant-thumb.webp",
+    "dimensions": [
+      1000,
+      1000
+    ],
+    "kind": "Official game artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "minecraft",
+    "sourcePage": "https://www.minecraft.net/en-us/about-minecraft",
+    "imageUrl": "https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/About-Minecraft_Featured-Image-0_570x321.jpg",
+    "file": "/media/games/minecraft-thumb.webp",
+    "dimensions": [
+      570,
+      321
+    ],
+    "kind": "Official game artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "phantom-blade-zero",
+    "sourcePage": "https://store.steampowered.com/app/4115450/",
+    "imageUrl": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4115450/98af27aecb2eedd674e4e18b5fb3e58754729589/capsule_616x353.jpg?t=1793261976",
+    "file": "/media/games/phantom-blade-zero-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official Steam capsule artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "hades-2",
+    "sourcePage": "https://store.steampowered.com/app/1145350/",
+    "imageUrl": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1145350/65e1c51cf2950d70209d63e288d1c5ba3f86044b/capsule_616x353.jpg?t=1779901265",
+    "file": "/media/games/hades-2-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official game artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "journey",
+    "sourcePage": "https://store.steampowered.com/app/638230/",
+    "imageUrl": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/638230/capsule_616x353.jpg?t=1729099361",
+    "file": "/media/games/journey-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official game artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "titanfall-2",
+    "sourcePage": "https://store.steampowered.com/app/1237970/",
+    "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/1237970/capsule_616x353.jpg",
+    "file": "/media/games/titanfall-2-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official game artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "rainbow-six",
+    "sourcePage": "https://store.steampowered.com/app/359550/",
+    "imageUrl": "https://cdn.akamai.steamstatic.com/steam/apps/359550/capsule_616x353.jpg",
+    "file": "/media/games/rainbow-six-thumb.webp",
+    "dimensions": [
+      616,
+      353
+    ],
+    "kind": "Official game artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "tft",
+    "sourcePage": "https://teamfighttactics.leagueoflegends.com/en-us/",
+    "imageUrl": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/d63adacd93e313c1e61bbeb2eb37d8c4ca85848d-1920x1080.jpg",
+    "file": "/media/games/tft-thumb.webp",
+    "dimensions": [
+      1200,
+      675
+    ],
+    "kind": "Official game artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "roco-world",
+    "sourcePage": "https://rocom.qq.com/",
+    "imageUrl": "https://game.gtimg.cn/images/rocom/act/a20260706preview/web/part1/20261026/bg.jpg",
+    "file": "/media/games/roco-world-thumb.webp",
+    "dimensions": [
+      1200,
+      675
+    ],
+    "kind": "Official game artwork",
+    "display": "contain, centered; full frame visible"
+  },
+  {
+    "id": "yimeng-jianghu",
+    "sourcePage": "https://jianghu.163.com/",
+    "imageUrl": "https://jianghu.res.netease.com/pc/fab/20230612155527//img/version2/3_d60cfc3.jpg",
+    "file": "/media/games/yimeng-jianghu-thumb.webp",
+    "dimensions": [
+      1200,
+      610
+    ],
+    "kind": "Official game artwork",
+    "display": "contain, centered; full frame visible"
+  }
+]

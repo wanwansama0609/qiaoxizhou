@@ -1,0 +1,14 @@
+node_modules/
+dist/
+qa/
+tools/python/
+.wrangler/
+.vite/
+.cache/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+Desktop.ini

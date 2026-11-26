@@ -1,0 +1,40 @@
+export const gameCategories = [
+  { id: 'competitive', label: ['竞技对战', 'Competitive Games'] },
+  { id: 'cooperative', label: ['合作冒险', 'Co-op Adventures'] },
+  { id: 'social', label: ['社交推理与派对', 'Social Deduction & Party'] },
+  { id: 'narrative', label: ['叙事与解谜', 'Stories & Puzzles'] },
+  { id: 'action', label: ['动作冒险', 'Action Adventures'] },
+  { id: 'cards', label: ['卡牌与策略', 'Cards & Strategy'] },
+  { id: 'sandbox', label: ['沙盒与开放世界', 'Sandbox & Open Worlds'] },
+];
+
+// Personal selections come from Qiaoxi. Artwork sources are recorded in
+// public/media/games/sources.json. Descriptors describe genres, not play history.
+export const favoriteGames = [
+  { id: 'cs2', title: ['反恐精英 2', 'Counter-Strike 2'], category: 'competitive', detail: ['战术射击 · 5v5', 'Tactical FPS · 5v5'], url: 'https://store.steampowered.com/app/730/' },
+  { id: 'valorant', title: ['无畏契约', 'VALORANT'], category: 'competitive', detail: ['英雄技能 · 战术射击', 'Agent abilities · Tactical FPS'], url: 'https://playvalorant.com/en-us/' },
+  { id: 'apex', title: ['Apex 英雄', 'Apex Legends'], category: 'competitive', detail: ['英雄射击 · 大逃杀', 'Hero shooter · Battle royale'], url: 'https://store.steampowered.com/app/1172470/' },
+  { id: 'rainbow-six', title: ['彩虹六号：围攻', 'Rainbow Six Siege'], category: 'competitive', detail: ['战术射击 · 团队攻防', 'Tactical FPS · Team-based attack & defense'], url: 'https://store.steampowered.com/app/359550/' },
+  { id: 'it-takes-two', title: ['双人成行', 'It Takes Two'], category: 'cooperative', detail: ['双人合作 · 平台冒险', 'Two-player co-op · Platforming'], url: 'https://store.steampowered.com/app/1426210/' },
+  { id: 'split-fiction', title: ['双影奇境', 'Split Fiction'], category: 'cooperative', detail: ['双人合作 · 科幻与奇幻', 'Two-player co-op · Sci-fi & fantasy'], url: 'https://store.steampowered.com/app/2001120/' },
+  { id: 'portal-2', title: ['传送门 2', 'Portal 2'], category: 'cooperative', detail: ['空间解谜 · 单人 / 合作', 'Spatial puzzles · Solo / co-op'], url: 'https://store.steampowered.com/app/620/' },
+  { id: 'we-were-here', title: ['我们曾到此系列', 'We Were Here Series'], category: 'cooperative', series: true, detail: ['双人解谜 · 沟通协作', 'Two-player puzzles · Communication'], url: 'https://totalmayhemgames.com/' },
+  { id: 'dread-hunger', title: ['恐惧饥荒', 'Dread Hunger'], category: 'social', detail: ['生存探索 · 隐藏身份', 'Survival · Hidden roles'], url: 'https://store.steampowered.com/app/1418630/' },
+  { id: 'among-us', title: ['我们之中', 'Among Us'], category: 'social', detail: ['隐藏身份 · 推理与欺骗', 'Hidden roles · Deduction & deception'], url: 'https://store.steampowered.com/app/945360/' },
+  { id: 'overcooked-2', title: ['胡闹厨房 2', 'Overcooked! 2'], category: 'social', detail: ['多人合作 · 厨房协作', 'Co-op cooking · Team coordination'], url: 'https://store.steampowered.com/app/728880/' },
+  { id: 'fall-guys', title: ['糖豆人', 'Fall Guys'], category: 'social', detail: ['多人派对 · 障碍竞速', 'Party game · Obstacle courses'], url: 'https://www.fallguys.com/' },
+  { id: 'detroit', title: ['底特律：化身为人', 'Detroit: Become Human'], category: 'narrative', detail: ['互动叙事 · 分支选择', 'Interactive narrative · Branching choices'], url: 'https://store.steampowered.com/app/1222140/' },
+  { id: 'undertale', title: ['传说之下', 'UNDERTALE'], category: 'narrative', detail: ['角色扮演 · 选择与后果', 'Role-playing · Choices & consequences'], url: 'https://store.steampowered.com/app/391540/' },
+  { id: 'ace-attorney', title: ['逆转裁判系列', 'Ace Attorney Series'], category: 'narrative', series: true, detail: ['法庭推理 · 证据与证言', 'Courtroom mysteries · Evidence & testimony'], url: 'https://www.ace-attorney.com/' },
+  { id: 'yangtze-river', title: ['山河旅探', 'Murders on the Yangtze River'], category: 'narrative', detail: ['本格推理 · 历史叙事', 'Detective puzzles · Historical narrative'], url: 'https://store.steampowered.com/app/1746030/' },
+  { id: 'journey', title: ['风之旅人', 'Journey'], category: 'narrative', detail: ['环境叙事 · 探索与相遇', 'Environmental storytelling · Exploration'], url: 'https://store.steampowered.com/app/638230/' },
+  { id: 'black-myth-wukong', title: ['黑神话：悟空', 'Black Myth: Wukong'], category: 'action', detail: ['动作角色扮演 · 神话世界', 'Action RPG · Mythology'], url: 'https://store.steampowered.com/app/2358720/' },
+  { id: 'phantom-blade-zero', title: ['影之刃零', 'Phantom Blade Zero'], category: 'action', detail: ['武侠动作 · 战斗探索', 'Martial arts · Action adventure'], url: 'https://store.steampowered.com/app/4115450/' },
+  { id: 'hades-2', title: ['哈迪斯 2', 'Hades II'], category: 'action', detail: ['Roguelike 动作 · 希腊神话', 'Roguelike action · Greek mythology'], url: 'https://store.steampowered.com/app/1145350/' },
+  { id: 'titanfall-2', title: ['泰坦陨落 2', 'Titanfall 2'], category: 'action', detail: ['第一人称射击 · 机甲战斗', 'First-person shooter · Titan combat'], url: 'https://store.steampowered.com/app/1237970/' },
+  { id: 'balatro', title: ['小丑牌', 'Balatro'], category: 'cards', detail: ['Roguelike 卡牌 · 组合策略', 'Roguelike deckbuilder · Synergies'], url: 'https://store.steampowered.com/app/2379780/' },
+  { id: 'tft', title: ['云顶之弈', 'Teamfight Tactics'], category: 'cards', detail: ['自走棋 · 阵容构筑', 'Auto battler · Team composition'], url: 'https://teamfighttactics.leagueoflegends.com/en-us/' },
+  { id: 'minecraft', title: ['我的世界', 'Minecraft'], category: 'sandbox', detail: ['开放世界 · 建造与探索', 'Open world · Building & exploration'], url: 'https://www.minecraft.net/en-us/about-minecraft' },
+  { id: 'roco-world', title: ['洛克王国：世界', 'Roco Kingdom: World'], category: 'sandbox', detail: ['开放世界 · 精灵探索', 'Open world · Creature collecting'], url: 'https://rocom.qq.com/' },
+  { id: 'yimeng-jianghu', title: ['一梦江湖', 'Yimeng Jianghu'], category: 'sandbox', detail: ['武侠世界 · 多人角色扮演', 'Wuxia world · MMORPG'], url: 'https://jianghu.163.com/' },
+].map(game => ({ ...game, image: `/media/games/${game.id}-thumb.webp` }));

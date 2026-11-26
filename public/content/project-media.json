@@ -1,0 +1,66 @@
+{
+  "one-more-move": {
+    "image": "/media/one-more-move.webp",
+    "link": "https://josiez.itch.io/one-more-move"
+  },
+  "time-puzzle": {
+    "image": "/media/projects/time-puzzle-20261126.webp",
+    "link": "https://www.artstation.com/artwork/31bwDm",
+    "thumbnail": "/media/projects/time-puzzle-cover-20261126.webp"
+  },
+  "infiltration": {
+    "image": "/media/projects/infiltration-20261126.webp",
+    "link": "https://www.artstation.com/artwork/b0BVba",
+    "thumbnail": "/media/projects/infiltration-cover-20261126.webp"
+  },
+  "neon-alley": {
+    "image": "/media/projects/neon-alley-20261126.webp",
+    "link": "https://www.artstation.com/artwork/b0BVJn",
+    "thumbnail": "/media/projects/neon-alley-cover-20261126.webp"
+  },
+  "potion-shop-sign": {
+    "image": "/media/projects/potion-shop-sign-20261126.webp",
+    "link": "https://www.artstation.com/artwork/8vmrB6",
+    "thumbnail": "/media/projects/potion-shop-sign-cover-20261126.webp"
+  },
+  "sci-fi-blaster": {
+    "image": "/media/projects/sci-fi-blaster-20261126.webp",
+    "link": "https://www.artstation.com/artwork/ayEgo9",
+    "thumbnail": "/media/projects/sci-fi-blaster-cover-20261126.webp"
+  },
+  "stylized-props": {
+    "image": "/media/projects/stylized-props-20261126.webp",
+    "link": "https://www.artstation.com/artwork/G1kmXQ",
+    "thumbnail": "/media/projects/stylized-props-cover-20261126.webp"
+  },
+  "character-animation": {
+    "image": "/media/projects/character-animation-20261126.webp",
+    "link": "https://www.artstation.com/artwork/zzQ5Q6",
+    "thumbnail": "/media/projects/character-animation-cover-20261126.webp"
+  },
+  "character-rigging": {
+    "image": "/media/projects/character-rigging-20261126.webp",
+    "link": "https://www.artstation.com/artwork/wOPEE9",
+    "thumbnail": "/media/projects/character-rigging-cover-20261126.webp"
+  },
+  "water-fire-monsters": {
+    "image": "/media/projects/water-fire-monsters-20261126.webp",
+    "link": "https://www.artstation.com/artwork/41a6xY",
+    "thumbnail": "/media/projects/water-fire-monsters-cover-20261126.webp"
+  },
+  "cs2-valorant": {
+    "image": "/media/projects/cs2-valorant-20261126.webp",
+    "link": "https://doi.org/10.54254/2753-7048/54/20241603",
+    "thumbnail": "/media/projects/cs2-valorant-cover-20261126.webp"
+  },
+  "valorant-mobile": {
+    "image": "/media/projects/valorant-mobile-20261126.webp",
+    "link": "https://docs.google.com/presentation/d/1E45Ym5t1AwUV5F18UOnbhcOgsquEsulT/edit?usp=sharing&ouid=114622865978608215713&rtpof=true&sd=true",
+    "thumbnail": "/media/projects/valorant-mobile-cover-20261126.webp"
+  },
+  "elemental-magic": {
+    "image": "/media/projects/elemental-magic-20261126.webp",
+    "link": "https://tabletopia.com/games/project-1-qiaoxi-zhou-final-version-fd97v2/play-now",
+    "thumbnail": "/media/projects/elemental-magic-cover-20261126.webp"
+  }
+}

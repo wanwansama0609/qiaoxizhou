@@ -1,0 +1,125 @@
+@layer components {
+  .personal-photo { object-position: 50% 20%; }
+  .portrait-index { background: #120a1ca6; padding: 6px 8px; color: #e1c9eb; }
+  .about-meta { font-size: 12px; line-height: 1.65; color: #c8afd4; gap: 5px; margin-top: 19px; }
+  .about-meta span:last-child { font-size: 16px; color: var(--accent); letter-spacing: .015em; }
+  .experience-list { align-self: center; }
+  .experience-row { padding-block: 25px; }
+  .experience-row::before { top: 30px; }
+  .work-toolbar { gap: 24px; }
+  .filter-list { flex: 1; min-width: 0; overflow-x: auto; padding-block: 3px 9px; scrollbar-width: thin; scrollbar-color: #9762a8 #17101e; }
+  .filter-list button { flex-shrink: 0; white-space: nowrap; gap: 12px; padding: 10px 13px; }
+  .edit-projects { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--accent); border: 1px solid #e18ed650; padding: 11px 13px; flex-shrink: 0; }
+  .edit-projects:hover { background: #f36de00d; }
+  .media-load-error { font-size: 12px; color: #eab6dd; margin-bottom: 15px; }
+  .gallery-heading { display: flex; justify-content: space-between; align-items: center; gap: 25px; margin-bottom: 23px; }
+  .gallery-heading h3 { font-size: 21px; font-weight: 500; display: flex; align-items: baseline; gap: 12px; }
+  .gallery-heading h3 .mono { color: var(--accent); font-size: 11px; }
+  .gallery-heading p { font-size: 12px; line-height: 1.7; color: #a991b8; margin-top: 8px; }
+  .gallery-controls { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+  .gallery-controls > .mono { color: #caa4d5; font-size: 11px; margin-right: 12px; min-width: 91px; text-align: right; }
+  .gallery-arrow { width: 39px; height: 39px; border: 1px solid #e48be361; color: var(--accent); display: grid; place-items: center; transition: background .2s; }
+  .gallery-arrow:not(:disabled):hover { background: var(--accent); color: var(--bg); }
+  .gallery-arrow:disabled { opacity: .3; cursor: default; }
+  .project-track { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 40px) / 3); gap: 20px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 6px 0 17px; }
+  .project-track::-webkit-scrollbar { display: none; }
+  .project-track:focus-visible { outline-offset: 4px; }
+  .project-track .project-card { scroll-snap-align: start; min-width: 0; }
+  .project-track .project-card:focus-visible { outline-offset: -2px; }
+  .project-track .project-image { aspect-ratio: 1.55; }
+  .project-track .project-copy { padding: 21px 1px 0; }
+  .project-track .project-copy h3 { font-size: clamp(20px,1.75vw,28px); line-height: 1.3; }
+  .project-track .project-copy > p { max-width: 98%; }
+  .project-track .project-tags { padding-top: 20px; }
+  .project-placeholder { min-height: 100%; width: 100%; height: 100%; position: relative; isolation: isolate; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; background: #17101f; color: #9874ae; }
+  .project-placeholder > svg { margin-bottom: 9px; color: #815294; }
+  .project-placeholder > .mono { font-size: 11px; color: #c09acc; }
+  .project-placeholder > span:last-child { font-size: 11px; color: #8f759f; }
+  .placeholder-grid { position: absolute; inset: 0; z-index: -1; background-image: linear-gradient(#dda1f10a 1px,transparent 1px),linear-gradient(90deg,#dda1f10a 1px,transparent 1px); background-size: 32px 32px; }
+  .gallery-scrollbar { display: flex; align-items: center; gap: 22px; padding-top: 23px; border-top: 1px solid var(--line); margin-top: 10px; }
+  .gallery-scrollbar > .mono { color: #a27db3; flex-shrink: 0; font-size: 11px; }
+  .gallery-scrollbar input { flex: 1; min-width: 0; width: 100%; appearance: none; height: 24px; background: transparent; cursor: ew-resize; }
+  .gallery-scrollbar input::-webkit-slider-runnable-track { height: 3px; background: #4b2d59; }
+  .gallery-scrollbar input::-moz-range-track { height: 3px; background: #4b2d59; }
+  .gallery-scrollbar input::-webkit-slider-thumb { appearance: none; width: 42px; height: 11px; margin-top: -4px; border: 1px solid #ffb3f1; background: var(--accent); }
+  .gallery-scrollbar input::-moz-range-thumb { width: 42px; height: 9px; border: 1px solid #ffb3f1; border-radius: 0; background: var(--accent); }
+  .gallery-scrollbar input:disabled { cursor: default; opacity: .3; }
+  .dialog-cover > .project-placeholder { height: 260px; min-height: 260px; }
+  .project-tool-icons { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; list-style: none; padding: 0; margin: 0; }
+  .project-tool-item { position: relative; }
+  .project-tool-icon { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid #b87fd13d; border-radius: 4px; color: #d6b2e8; background: #211629; cursor: default; transition: background .2s, border-color .2s; }
+  .project-tool-icon > img { display: block; width: 26px; height: 26px; object-fit: contain; }
+  .project-tool-icon:hover, .project-tool-icon:focus-visible { background: #321e38; border-color: var(--accent); }
+  .project-tool-tooltip { position: absolute; z-index: 5; top: calc(100% + 8px); left: 0; width: max-content; max-width: min(240px, calc(100vw - 80px)); padding: 7px 10px; border: 1px solid #ba77cd66; background: #201329; color: #f1e7f7; box-shadow: 0 8px 20px #0005; font-size: 11px; line-height: 1.5; opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(-3px); transition: opacity .15s, transform .15s, visibility .15s; }
+  .project-tool-item:hover .project-tool-tooltip, .project-tool-item:focus-within .project-tool-tooltip { opacity: 1; visibility: visible; transform: translateY(0); }
+  .skill-toolset { margin-top: auto; }
+  .skill-software-icons { position: relative; width: 100%; gap: 11px; }
+  .skill-software-icons .project-tool-item { position: static; }
+  .skill-software-icons .project-tool-icon { width: 44px; height: 44px; }
+  .skill-software-icons .project-tool-icon > img { width: 28px; height: 28px; }
+  .skill-software-icons .project-tool-tooltip { top: auto; bottom: calc(100% + 8px); left: 0; max-width: 100%; transform: translateY(3px); }
+  .skill-software-icons .project-tool-item:hover .project-tool-tooltip,
+  .skill-software-icons .project-tool-item:focus-within .project-tool-tooltip { transform: translateY(0); }
+  .editor-dialog { width: min(800px,calc(100% - 40px)); }
+  .editor-body { padding: 30px 36px 36px; }
+  .editor-body > h2 { font-size: 25px; font-weight: 500; margin-bottom: 12px; }
+  .editor-body > p { font-size: 12px; color: #b29abb; line-height: 1.9; }
+  .editor-field { display: flex; flex-direction: column; gap: 10px; font-size: 12px; margin-top: 23px; color: #d6bcdf; }
+  .editor-field input, .editor-field select { width: 100%; font: 13px var(--sans); padding: 13px 14px; border: 1px solid #9c65b34d; border-radius: 0; background: #0e0a13; color: #e7d8ef; }
+  .editor-field input::placeholder { color: #6d537c; }
+  .editor-media-row { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 25px; align-items: center; }
+  .editor-preview { display: grid; place-items: center; width: 100%; aspect-ratio: 1.55; border: 1px solid #ae6eb24d; background: #201328; overflow: hidden; color: #9e69ab; }
+  .editor-preview > img { width: 100%; height: 100%; object-fit: cover; }
+  .editor-upload .button { position: relative; clip-path: none; border: 1px solid #d484d94a; color: var(--accent); font-size: 11px; padding: 12px 15px; gap: 10px; cursor: pointer; }
+  .editor-file-label > input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+  .editor-file-label:focus-within { outline: 2px solid var(--accent); outline-offset: 4px; }
+  .editor-upload p { font-size: 11px; color: #a083af; line-height: 1.8; margin-top: 9px; }
+  .editor-upload .text-link { margin-top: 12px; font-size: 11px; text-decoration: underline; }
+  .editor-link-hint { margin-top: 9px; font-size: 11px !important; }
+  .editor-footer { display: flex; align-items: center; gap: 22px; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 23px; margin-top: 25px; }
+  .editor-footer > span { font-size: 11px; color: #e9a8da; line-height: 1.8; }
+  .editor-footer .button { flex-shrink: 0; gap: 12px; }
+  .editor-dialog button:disabled { opacity: .4; cursor: default; }
+}
+@layer responsive {
+  @media (max-width: 1250px) {
+    .work-toolbar { gap: 16px; }
+    .filter-list button { font-size: 11px; padding-inline: 10px; }
+    .about-meta { font-size: 11px; }
+    .about-meta span:last-child { font-size: 15px; }
+  }
+  @media (max-width: 1000px) {
+    .project-track { grid-auto-columns: calc((100% - 20px) / 2); }
+    .experience-list { grid-template-columns: repeat(2,1fr); }
+    .experience-row { padding-block: 18px; }
+    .experience-row::before { top: 23px; }
+    .about-meta { font-size: 12px; }
+  }
+  @media (max-width: 760px) {
+    .filter-list { width: auto; justify-content: flex-start; }
+    .filter-list button { padding: 10px 11px; }
+    .work-toolbar { flex-wrap: wrap; gap: 8px; padding-block: 10px; }
+    .edit-projects { font-size: 11px; padding: 10px; }
+    .gallery-heading { align-items: flex-start; gap: 15px; }
+    .gallery-heading h3 { font-size: 18px; }
+    .gallery-heading p { font-size: 11px; }
+    .gallery-controls { gap: 6px; }
+    .gallery-controls > .mono { display: none; }
+    .gallery-arrow { width: 32px; height: 32px; }
+    .project-track { grid-auto-columns: 87%; gap: 16px; }
+    .project-track .project-copy h3 { font-size: 23px; }
+    .project-track .project-image { aspect-ratio: 1.45; }
+    .gallery-scrollbar { gap: 15px; padding-top: 16px; }
+    .gallery-scrollbar > .mono:last-child { display: none; }
+    .about-meta { font-size: 11px; flex-direction: column; gap: 5px; }
+    .about-meta span:last-child { font-size: 17px; }
+    .experience-list { grid-template-columns: 1fr; }
+    .editor-body { padding: 25px 22px; }
+    .editor-dialog { width: calc(100% - 20px); }
+    .editor-body > h2 { font-size: 22px; }
+    .editor-media-row { grid-template-columns: 1fr; gap: 15px; }
+    .editor-preview { max-width: 360px; }
+    .editor-footer { flex-wrap: wrap; }
+    .editor-footer > span { width: 100%; }
+  }
+}

@@ -1,0 +1,30 @@
+@layer components {
+  .hero-project-motion .tilted-card__front { position: relative; overflow: visible; transform: rotate(3deg); }
+  .hero-project-motion .tilted-card__glare { border-radius: 0; }
+  .hero-project-motion .tilted-card__rim,
+  .hero-project-motion .tilted-card__edge,
+  .hero-project-motion .tilted-card__shadow { display: none; }
+  .spotlight-card.skill-card { border-radius: 0; }
+  .hero-atmosphere { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  .hero-terrain { position: absolute; inset: 0; mask-image: linear-gradient(90deg, #0009, #000 80%); }
+  .hero-ambient-light { position: absolute; inset: -15%; background: radial-gradient(ellipse at 72% 50%, #b04ed33d, transparent 48%), radial-gradient(ellipse at 15% 90%, #6c42c82d, transparent 50%); animation: atmosphere-drift 16s ease-in-out infinite alternate; }
+  .hero h1 > .accent-shimmer { color: transparent; }
+  .project-image.glare-hover { display: block; }
+  .contact-orbit { animation: contact-orbit-drift 18s ease-in-out infinite alternate; }
+  .button-accent { box-shadow: 0 0 25px #e365d31a; }
+  .button-accent:hover { box-shadow: 0 0 35px #ec81da45; }
+  .text-link > svg { transition: transform .3s; }
+  .text-link:hover > svg { transform: translate(3px, -2px); }
+  @keyframes atmosphere-drift { to { transform: translate3d(3%, -3%, 0) scale(1.08); } }
+  @keyframes contact-orbit-drift { to { transform: rotate(38deg) translate3d(-14px, 8px, 0); } }
+}
+@layer responsive {
+  @media (prefers-reduced-motion: reduce) {
+    .motion-reveal { opacity: 1 !important; visibility: visible !important; transform: none !important; filter: none !important; }
+    .hero-project-motion .tilted-card__body { transform: none !important; }
+    .hero-project-motion .tilted-card__glare,
+    .spotlight-card__light, .spotlight-card__edge, .spotlight-card__grain { opacity: 0 !important; }
+    .hero-ambient-light, .contact-orbit { animation: none; }
+    .glare-hover__glare { opacity: 0 !important; }
+  }
+}

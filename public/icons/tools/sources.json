@@ -1,0 +1,93 @@
+[
+  {
+    "name": "unreal-engine",
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/unrealengine.svg",
+    "collection": "Simple Icons",
+    "version": "13.21.0"
+  },
+  {
+    "name": "unity",
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/unity.svg",
+    "collection": "Simple Icons",
+    "version": "13.21.0"
+  },
+  {
+    "name": "blender",
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/blender.svg",
+    "collection": "Simple Icons",
+    "version": "13.21.0"
+  },
+  {
+    "name": "powerpoint",
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/microsoftpowerpoint.svg",
+    "collection": "Simple Icons",
+    "version": "11.15.0"
+  },
+  {
+    "name": "tabletopia",
+    "source": "https://f.tabletopia.com/assets/portal/static/16/content/images/favicon.png",
+    "collection": "Tabletopia official website favicon"
+  },
+  {
+    "name": "substance-painter",
+    "source": "Icon resource from locally installed Adobe Substance 3D Painter",
+    "collection": "Adobe product icon"
+  },
+  {
+    "name": "figma",
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/figma.svg",
+    "collection": "Simple Icons",
+    "version": "13.21.0"
+  },
+  {
+    "name": "google-sheets",
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/googlesheets.svg",
+    "collection": "Simple Icons",
+    "version": "13.21.0"
+  },
+  {
+    "name": "procreate",
+    "source": "https://procreate-assets-cdn.procreate.com/_nuxt/apple-icon.DmK-mlNX.png",
+    "collection": "Procreate official website icon"
+  },
+  {
+    "name": "photoshop",
+    "source": "Icon resource from locally installed Adobe Photoshop 2026",
+    "collection": "Adobe product icon"
+  },
+  {
+    "name": "illustrator",
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/adobeillustrator.svg",
+    "collection": "Simple Icons",
+    "version": "11.15.0"
+  },
+  {
+    "name": "after-effects",
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/adobeaftereffects.svg",
+    "collection": "Simple Icons",
+    "version": "11.15.0"
+  },
+  {
+    "name": "premiere-pro",
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/adobepremierepro.svg",
+    "collection": "Simple Icons",
+    "version": "11.15.0"
+  },
+  {
+    "name": "word",
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/microsoftword.svg",
+    "collection": "Simple Icons",
+    "version": "11.15.0"
+  },
+  {
+    "name": "excel",
+    "source": "https://cdn.jsdelivr.net/npm/simple-icons@11.15.0/icons/microsoftexcel.svg",
+    "collection": "Simple Icons",
+    "version": "11.15.0"
+  },
+  {
+    "name": "capcut",
+    "source": "https://sf16-web-tos-buz.capcutcdn-us.com/obj/capcut-web-buz-tx/common/images/lv_web-2.ico",
+    "collection": "CapCut official website icon"
+  }
+]
