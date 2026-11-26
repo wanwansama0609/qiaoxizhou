@@ -6,6 +6,8 @@ import ProjectTools, { SkillTools } from './ProjectTools';
 import FavoriteGamesSection from './FavoriteGamesSection.jsx';
 import { LANGUAGE_STORAGE_KEY, projectTitle, translateTerm } from './localization.js';
 import { AccentText, HeroAtmosphere, HeroTilt, Reveal, SkillSpotlight } from './effects/PortfolioMotion.jsx';
+import ResponsiveImage from './ResponsiveImage.jsx';
+import savedProjectMedia from 'virtual:portfolio-media';
 
 function projectCategoryOrder(project) {
   return categories.findIndex(category => category.id !== 'all' && isProjectInCategory(project, category.id));
@@ -33,7 +35,7 @@ function Hero({ t, project, onOpenProject }) {
         </div>
         <HeroTilt><button className="hero-project" onClick={onOpenProject} aria-label={t(`查看游戏项目《${projectTitle(project, t)}》`, 'View game project One More Move')}>
           <span className="hero-project-tab mono">{t('精选项目', 'SELECTED PROJECT')}</span>
-          <span className="project-poster"><ProjectVisual project={project} t={t} variant="cover" loading="eager" fetchPriority="high" /></span>
+          <span className="project-poster"><ProjectVisual project={project} t={t} variant="cover" loading="eager" fetchPriority="high" sizeHint="hero" /></span>
           <span className="hero-project-caption"><span><small className="mono">{t('个人游戏项目', 'PERSONAL GAME PROJECT')}</small><strong>{projectTitle(project, t)}</strong></span><span className="poster-arrow"><ArrowUpRight size={26} /></span></span>
           <span className="hero-project-note mono">{t('虚幻引擎 / 叙事解谜', 'UNREAL ENGINE / NARRATIVE PUZZLE')}</span>
         </button></HeroTilt>
@@ -76,7 +78,7 @@ export default function App() {
   const [active, setActive] = useState('home');
   const [menuOpen, setMenuOpen] = useState(false);
   const [filter, setFilter] = useState('all');
-  const [projectMedia, setProjectMedia] = useState({});
+  const [projectMedia, setProjectMedia] = useState(savedProjectMedia);
   const [mediaError, setMediaError] = useState(false);
   const [selected, setSelected] = useState(null);
   const [copied, setCopied] = useState(false);
@@ -93,6 +95,7 @@ export default function App() {
   const selectedCategory = categories.find(category => category.id === filter);
 
   useEffect(() => {
+    if (!import.meta.env.DEV) return;
     const controller = new AbortController();
     fetch('/content/project-media.json', { signal: controller.signal, cache: 'no-store' })
       .then(response => { if (!response.ok) throw new Error('Media unavailable'); return response.json(); })
@@ -154,7 +157,7 @@ export default function App() {
         <SectionLabel number="01">{t('关于我 / 个人经历', 'ABOUT ME / A LITTLE ABOUT ME')}</SectionLabel>
         <div className="about-grid">
           <figure className="about-visual"><div className="portrait-frame">
-            {profile.portrait ? <img className="personal-photo" src={profile.portrait} alt={t('周巧兮的个人照片', 'Portrait of Qiaoxi Zhou')} loading="lazy" /> : <div className="photo-placeholder"><span className="photo-corner top-left" /><span className="photo-corner bottom-right" /><UserRound size={66} strokeWidth={.7} /><span className="mono">{t("个人照片 / 周巧兮", "PORTRAIT / QIAOXI")}</span><p>{t('个人照片待添加', 'Personal photo coming soon')}</p></div>}
+            {profile.portrait ? <ResponsiveImage className="personal-photo" src={profile.portrait} sizeHint="portrait" alt={t('周巧兮的个人照片', 'Portrait of Qiaoxi Zhou')} loading="lazy" /> : <div className="photo-placeholder"><span className="photo-corner top-left" /><span className="photo-corner bottom-right" /><UserRound size={66} strokeWidth={.7} /><span className="mono">{t("个人照片 / 周巧兮", "PORTRAIT / QIAOXI")}</span><p>{t('个人照片待添加', 'Personal photo coming soon')}</p></div>}
             <span className="portrait-index mono">{t("个人档案_01", "PROFILE_01")}</span>
           </div><figcaption><span>{t("周巧兮", "QIAOXI ZHOU")}</span><span className="mono">{t("游戏设计师", "GAME DESIGNER")}</span></figcaption></figure>
           <div className="about-content"><h2 id="about-title">{t('你好，我是', 'Hello, I’m')}<br /><span>{t('周巧兮。', 'Qiaoxi.')}</span></h2>
@@ -172,7 +175,7 @@ export default function App() {
         <Reveal className="section-heading"><div><h2 id="work-title">{t("精选", "SELECTED ")}<em>{t("作品。", "WORK.")}</em></h2><p>{t('游戏、视觉创作与分析研究。按分类探索，左右滑动翻看。', 'Games, visual work, and analysis. Choose a category and scroll to explore.')}</p></div><span className="section-count mono">{t('游戏 / 美术 / 分析', 'GAMES / ART / ANALYSIS')}<br />{t('项目', 'PROJECTS')} / {String(resolvedProjects.length).padStart(2, '0')}</span></Reveal>
         <div className="work-toolbar"><div className="filter-list" aria-label={t('项目分类', 'Filter projects')}>{categories.map(category => <button key={category.id} data-category={category.id} className={filter === category.id ? 'is-active' : ''} onClick={() => setFilter(category.id)} aria-pressed={filter === category.id}>{t(...category.label)}<span className="mono">{String(resolvedProjects.filter(project => isProjectInCategory(project, category.id)).length).padStart(2, '0')}</span></button>)}</div>
         </div>
-        {mediaError && <p className="media-load-error" role="status">{t('作品图片和链接配置暂未加载，请刷新页面重试。', 'Project media could not be loaded. Please refresh to retry.')}</p>}
+        {mediaError && <p className="media-load-error" role="status">{t('暂时无法检查最新素材，正在显示已保存的版本。', 'Showing saved project media. Unable to check for updates right now.')}</p>}
         <ProjectGallery key={filter} items={filtered} category={selectedCategory} t={t} onSelect={setSelected} suspended={Boolean(selected)} />
       </div></section>
 

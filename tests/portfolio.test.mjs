@@ -22,8 +22,9 @@ test('Portfolio interactions and content', async t => {
   const { document } = window;
   window.localStorage.setItem(LANGUAGE_STORAGE_KEY, 'zh');
   let clipboard = '';
+  let mediaFetches = 0;
   const media = JSON.parse(readFileSync(new URL('../public/content/project-media.json', import.meta.url), 'utf8'));
-  window.fetch = async () => ({ ok: true, json: async () => media });
+  window.fetch = async () => { mediaFetches++; return { ok: true, json: async () => media }; };
   window.matchMedia = () => ({ matches: false, addEventListener() {}, removeEventListener() {} });
   // ScrollTrigger saves/restores viewport position during its measurements.
   window.scrollTo = (x, y) => {
@@ -72,6 +73,7 @@ test('Portfolio interactions and content', async t => {
       assert.match(document.querySelector('#about').textContent, /毕业/);
       assert.equal(document.querySelectorAll('.experience-row').length, 2);
       assert.equal(document.querySelector('.edit-projects'), null, 'Production build hides the editor');
+      assert.equal(mediaFetches, 0, 'Published pages use saved media immediately without a configuration request');
       for (const skill of skills) for (const tool of skill.tools) assert.ok(document.querySelector('.skills-grid').textContent.includes(translateTerm(tool, zh => zh)), tool);
       assert.deepEqual([...document.querySelectorAll('[data-skill="design"] .skill-tools > span')].map(tag => tag.textContent), ['关卡设计', '游戏机制', '叙事设计', '原型开发']);
       assert.deepEqual([...document.querySelectorAll('[data-skill="code"] .skill-tools > span')].map(tag => tag.textContent), ['Python', 'C++']);
@@ -84,6 +86,35 @@ test('Portfolio interactions and content', async t => {
           assert.equal(icon.getAttribute('aria-label'), icon.nextElementSibling.textContent);
         }
       }
+    });
+    await t.test('responsive previews preload the hero, use smaller strip images, and fall back to originals', async () => {
+      const heroImage = document.querySelector('.hero-project img');
+      const head = new JSDOM(html);
+      try {
+        const preload = head.window.document.querySelector('link[rel="preload"][as="image"]');
+        assert.ok(preload);
+        assert.equal(preload.getAttribute('imagesrcset'), heroImage.getAttribute('srcset'));
+        assert.equal(preload.getAttribute('imagesizes'), heroImage.getAttribute('sizes'));
+      } finally { head.window.close(); }
+      assert.equal(heroImage.getAttribute('fetchpriority'), 'high');
+      const stripImage = document.querySelector('.showcase-thumbnails img');
+      const cover = document.querySelector('.showcase-card.is-current .project-image img');
+      assert.notEqual(stripImage.getAttribute('sizes'), cover.getAttribute('sizes'));
+      for (const image of document.querySelectorAll('img[srcset]')) {
+        for (const candidate of image.getAttribute('srcset').split(',')) {
+          const [path, width] = candidate.trim().split(/\s+/);
+          assert.match(width, /^\d+w$/);
+          assert.ok(existsSync(new URL(`../public${path}`, import.meta.url)), path);
+        }
+      }
+      cover.dispatchEvent(new window.Event('error')); await wait();
+      const fallback = document.querySelector('.showcase-card.is-current .project-image img');
+      assert.equal(fallback.getAttribute('srcset'), null);
+      assert.equal(fallback.getAttribute('src'), media['one-more-move'].image);
+      await click(document.querySelector('.showcase-card.is-current'));
+      assert.equal(document.querySelector('.dialog-cover img').getAttribute('src'), media['one-more-move'].image);
+      assert.equal(document.querySelector('.dialog-cover img').getAttribute('srcset'), null, 'Details retain the original full-resolution image');
+      await click(document.querySelector('dialog .icon-button'));
     });
     await t.test('favorite games are all visible in compact groups on the portfolio page', () => {
       const groups = {

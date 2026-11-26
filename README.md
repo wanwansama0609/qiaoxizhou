@@ -67,4 +67,12 @@ pnpm preview
 
 ## 素材与第三方代码
 
+### 图片加载优化
+
+网页按显示大小和屏幕像素密度选择预览图：项目卡片、首页、轮播缩略条和游戏小图使用不同尺寸。原始图片没有改写，项目详情继续使用原图；优化图加载失败时会退回原图。
+
+`src/image-variants.json` 与 `public/media/optimized/` 是已生成并提交的图片版本。首页图片已预加载，优化图片使用带内容哈希的文件名和长期缓存。发布版直接携带图片配置，避免首次加载时等待额外的配置请求。
+
+更新图片后，可在本地安装 Pillow 并运行 `python tools/optimize-images.py`，再将新图片、图片清单和更新后的 `index.html` 一并提交。Cloudflare 构建不需要 Python，仍使用 `pnpm build`。
+
 React Bits 组件许可证位于 `src/effects/reactbits/LICENSE.txt`，发布副本位于 `public/legal/react-bits-license.txt`。软件图标和游戏图片的来源记录保存在各自目录的 `sources.json` 中。

@@ -100,13 +100,13 @@ export default function ProjectShowcase({ items, t, onSelect, suspended = false 
       <div className="showcase-ambient" aria-hidden="true" /><div className="showcase-floor" aria-hidden="true" />
       {items.map((project, index) => {
         const offset = distanceFrom(index, active, items.length); const depth = Math.abs(offset);
-        return <ProjectCard key={project.id} project={project} t={t} onSelect={onSelect} className={`showcase-card ${index === active ? 'is-current' : ''}`}
+        return <ProjectCard key={project.id} project={project} t={t} onSelect={onSelect} imageSizeHint="showcase" className={`showcase-card ${index === active ? 'is-current' : ''}`}
           tabIndex={index === active ? 0 : -1} aria-hidden={index !== active}
           style={{ '--slide-x': `${offset * 72}%`, '--slide-angle': `${-offset * 10}deg`, '--slide-depth': `${-Math.min(depth, 3) * 170}px`, '--slide-scale': depth ? Math.max(0.7, 1 - depth * 0.12) : 1, opacity: depth === 0 ? 1 : depth === 1 ? 0.38 : 0, visibility: depth > 1 ? 'hidden' : 'visible', zIndex: items.length - depth }} />;
       })}
     </div>
     <div className="showcase-thumbnails" ref={thumbnailsRef} role="group" aria-label={t('选择要预览的项目', 'Choose a project to preview')}>
-      {items.map((project, index) => <button key={project.id} type="button" className={index === active ? 'is-current' : ''} data-preview-id={project.id} aria-pressed={index === active} aria-label={t(`预览：${projectTitle(project, t)}`, `Preview: ${project.title}`)} title={projectTitle(project, t)} onClick={() => go(index)}><ProjectVisual project={project} t={t} variant="cover" /></button>)}
+      {items.map((project, index) => <button key={project.id} type="button" className={index === active ? 'is-current' : ''} data-preview-id={project.id} aria-pressed={index === active} aria-label={t(`预览：${projectTitle(project, t)}`, `Preview: ${project.title}`)} title={projectTitle(project, t)} onClick={() => go(index)}><ProjectVisual project={project} t={t} variant="cover" sizeHint="strip" /></button>)}
     </div>
   </div>;
 }

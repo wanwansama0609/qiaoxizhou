@@ -1,0 +1,8 @@
+{
+  "hero": "(min-width: 1850px) 480px, (min-width: 1251px) 435px, (min-width: 761px) 350px, 80vw",
+  "card": "(max-width: 760px) 87vw, (max-width: 1000px) 45vw, (min-width: 1812px) 554px, 33vw",
+  "showcase": "(max-width: 760px) 87vw, (max-width: 1000px) 76vw, 860px",
+  "strip": "(max-width: 760px) 65px, (max-width: 1250px) 85px, 115px",
+  "game": "(max-width: 560px) 30vw, (max-width: 1000px) 18vw, 160px",
+  "portrait": "(max-width: 760px) 380px, (max-width: 1000px) 38vw, 430px"
+}

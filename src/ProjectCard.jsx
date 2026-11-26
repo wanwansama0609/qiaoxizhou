@@ -3,13 +3,14 @@ import { ArrowUpRight, Image as ImageIcon } from 'lucide-react';
 import { categories } from './content';
 import { projectTitle, translateTerm } from './localization.js';
 import { CoverGlare } from './effects/PortfolioMotion.jsx';
+import ResponsiveImage from './ResponsiveImage.jsx';
 
-export function ProjectVisual({ project, t, className = '', variant = 'detail', loading = 'lazy', fetchPriority }) {
+export function ProjectVisual({ project, t, className = '', variant = 'detail', loading = 'lazy', fetchPriority, sizeHint = 'card' }) {
   const image = variant === 'cover' ? project.thumbnail || project.image : project.image;
   const [failed, setFailed] = useState(false);
   useEffect(() => setFailed(false), [image]);
   const category = categories.find(item => item.id === project.category);
-  if (image && !failed) return <img className={className} src={image} alt={t(`${projectTitle(project, t)} 作品图片`, `${project.title} project image`)} loading={loading} fetchPriority={fetchPriority} draggable={false} onError={() => setFailed(true)} />;
+  if (image && !failed) return <ResponsiveImage className={className} src={image} responsive={variant === 'cover'} sizeHint={sizeHint} alt={t(`${projectTitle(project, t)} 作品图片`, `${project.title} project image`)} loading={loading} fetchPriority={fetchPriority} draggable={false} onError={() => setFailed(true)} />;
   return <div className={`project-placeholder ${className}`} role="img" aria-label={t(`${projectTitle(project, t)} 的图片位置`, `Image space for ${project.title}`)}>
     <div className="placeholder-grid" aria-hidden="true" /><ImageIcon size={34} strokeWidth={1} aria-hidden="true" />
     <span className="mono">{category ? t(...category.label).toUpperCase() : ''}</span>
@@ -17,9 +18,9 @@ export function ProjectVisual({ project, t, className = '', variant = 'detail', 
   </div>;
 }
 
-export function ProjectCard({ project, t, onSelect, className = '', ...buttonProps }) {
+export function ProjectCard({ project, t, onSelect, className = '', imageSizeHint = 'card', ...buttonProps }) {
   return <button className={`project-card ${className}`} {...buttonProps} data-project-id={project.id} onClick={() => onSelect(project)} aria-label={`${t('查看项目', 'View project')} ${projectTitle(project, t)}`}>
-    <CoverGlare className="project-image"><ProjectVisual project={project} t={t} variant="cover" />
+    <CoverGlare className="project-image"><ProjectVisual project={project} t={t} variant="cover" sizeHint={imageSizeHint} />
       {project.year && <span className="project-index mono">{project.year}</span>}
       <span className="project-open"><ArrowUpRight size={23} /></span>
     </CoverGlare>

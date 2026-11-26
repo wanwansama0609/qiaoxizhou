@@ -2,12 +2,13 @@ import { useState } from 'react';
 import { Gamepad2 } from 'lucide-react';
 import { gameCategories, favoriteGames } from './favoriteGames.js';
 import { CoverGlare, Reveal } from './effects/PortfolioMotion.jsx';
+import ResponsiveImage from './ResponsiveImage.jsx';
 
 function FavoriteGame({ game, t }) {
   const [failed, setFailed] = useState(false);
   return <a className="favorite-game" href={game.url} target="_blank" rel="noopener noreferrer" data-game-id={game.id} aria-label={t(`查看 ${game.title[0]} 的官方页面`, `Visit the official page for ${game.title[1]}`)}>
     <CoverGlare className="favorite-game-art" glareOpacity={0.16}>
-      {failed ? <Gamepad2 size={26} strokeWidth={1.3} aria-hidden="true" /> : <img src={game.image} alt={t(`${game.title[0]} 游戏画面`, `${game.title[1]} game artwork`)} loading="lazy" decoding="async" onError={() => setFailed(true)} />}
+      {failed ? <Gamepad2 size={26} strokeWidth={1.3} aria-hidden="true" /> : <ResponsiveImage src={game.image} sizeHint="game" alt={t(`${game.title[0]} 游戏画面`, `${game.title[1]} game artwork`)} loading="lazy" onError={() => setFailed(true)} />}
     </CoverGlare>
     <h4>{t(...game.title)}</h4>
   </a>;

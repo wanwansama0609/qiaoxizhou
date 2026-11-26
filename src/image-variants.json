@@ -1,0 +1,1076 @@
+{
+  "/media/one-more-move.webp": {
+    "width": 1672,
+    "height": 941,
+    "variants": [
+      {
+        "src": "/media/optimized/one-more-move-e7df724329e3-160w.webp",
+        "width": 160,
+        "height": 90,
+        "bytes": 6890
+      },
+      {
+        "src": "/media/optimized/one-more-move-d4f1bcaec768-320w.webp",
+        "width": 320,
+        "height": 180,
+        "bytes": 23116
+      },
+      {
+        "src": "/media/optimized/one-more-move-33b6cea77a9e-640w.webp",
+        "width": 640,
+        "height": 360,
+        "bytes": 80006
+      },
+      {
+        "src": "/media/optimized/one-more-move-97a5c218a7a1-960w.webp",
+        "width": 960,
+        "height": 540,
+        "bytes": 161212
+      },
+      {
+        "src": "/media/optimized/one-more-move-d2169f7067cc-1440w.webp",
+        "width": 1440,
+        "height": 810,
+        "bytes": 305722
+      }
+    ]
+  },
+  "/media/projects/time-puzzle-cover-20261126.webp": {
+    "width": 505,
+    "height": 326,
+    "variants": [
+      {
+        "src": "/media/optimized/time-puzzle-cover-20261126-91664de7c2c8-160w.webp",
+        "width": 160,
+        "height": 103,
+        "bytes": 3702
+      },
+      {
+        "src": "/media/optimized/time-puzzle-cover-20261126-56463aa9a69e-320w.webp",
+        "width": 320,
+        "height": 207,
+        "bytes": 8284
+      },
+      {
+        "src": "/media/optimized/time-puzzle-cover-20261126-ef87da7801c4-505w.webp",
+        "width": 505,
+        "height": 326,
+        "bytes": 14874
+      }
+    ]
+  },
+  "/media/projects/infiltration-cover-20261126.webp": {
+    "width": 1015,
+    "height": 655,
+    "variants": [
+      {
+        "src": "/media/optimized/infiltration-cover-20261126-ea9c092c3f16-160w.webp",
+        "width": 160,
+        "height": 103,
+        "bytes": 3040
+      },
+      {
+        "src": "/media/optimized/infiltration-cover-20261126-2b8ab985a4f3-320w.webp",
+        "width": 320,
+        "height": 207,
+        "bytes": 7204
+      },
+      {
+        "src": "/media/optimized/infiltration-cover-20261126-a30b718acdca-640w.webp",
+        "width": 640,
+        "height": 413,
+        "bytes": 16324
+      },
+      {
+        "src": "/media/optimized/infiltration-cover-20261126-3a736257f347-960w.webp",
+        "width": 960,
+        "height": 620,
+        "bytes": 26684
+      },
+      {
+        "src": "/media/optimized/infiltration-cover-20261126-29664a1dffa0-1015w.webp",
+        "width": 1015,
+        "height": 655,
+        "bytes": 30892
+      }
+    ]
+  },
+  "/media/projects/neon-alley-cover-20261126.webp": {
+    "width": 634,
+    "height": 409,
+    "variants": [
+      {
+        "src": "/media/optimized/neon-alley-cover-20261126-4084f42e621e-160w.webp",
+        "width": 160,
+        "height": 103,
+        "bytes": 2988
+      },
+      {
+        "src": "/media/optimized/neon-alley-cover-20261126-4ae8a39f99d9-320w.webp",
+        "width": 320,
+        "height": 206,
+        "bytes": 8352
+      },
+      {
+        "src": "/media/optimized/neon-alley-cover-20261126-d94e0c07e061-634w.webp",
+        "width": 634,
+        "height": 409,
+        "bytes": 25136
+      }
+    ]
+  },
+  "/media/projects/potion-shop-sign-cover-20261126.webp": {
+    "width": 1100,
+    "height": 710,
+    "variants": [
+      {
+        "src": "/media/optimized/potion-shop-sign-cover-20261126-4d842f5d5cf3-160w.webp",
+        "width": 160,
+        "height": 103,
+        "bytes": 1834
+      },
+      {
+        "src": "/media/optimized/potion-shop-sign-cover-20261126-3ed03ad5f1bc-320w.webp",
+        "width": 320,
+        "height": 207,
+        "bytes": 4488
+      },
+      {
+        "src": "/media/optimized/potion-shop-sign-cover-20261126-b1bd525e24a2-640w.webp",
+        "width": 640,
+        "height": 413,
+        "bytes": 10764
+      },
+      {
+        "src": "/media/optimized/potion-shop-sign-cover-20261126-e797a3ad448e-960w.webp",
+        "width": 960,
+        "height": 620,
+        "bytes": 17792
+      },
+      {
+        "src": "/media/optimized/potion-shop-sign-cover-20261126-afff6a6c2cf2-1100w.webp",
+        "width": 1100,
+        "height": 710,
+        "bytes": 22716
+      }
+    ]
+  },
+  "/media/projects/sci-fi-blaster-cover-20261126.webp": {
+    "width": 1100,
+    "height": 710,
+    "variants": [
+      {
+        "src": "/media/optimized/sci-fi-blaster-cover-20261126-c3a3c5f9cdc8-160w.webp",
+        "width": 160,
+        "height": 103,
+        "bytes": 2566
+      },
+      {
+        "src": "/media/optimized/sci-fi-blaster-cover-20261126-a223b3b3fbee-320w.webp",
+        "width": 320,
+        "height": 207,
+        "bytes": 6020
+      },
+      {
+        "src": "/media/optimized/sci-fi-blaster-cover-20261126-641ad1ce09a3-640w.webp",
+        "width": 640,
+        "height": 413,
+        "bytes": 14384
+      },
+      {
+        "src": "/media/optimized/sci-fi-blaster-cover-20261126-9998e01e7eab-960w.webp",
+        "width": 960,
+        "height": 620,
+        "bytes": 23254
+      },
+      {
+        "src": "/media/optimized/sci-fi-blaster-cover-20261126-593d5e4016bf-1100w.webp",
+        "width": 1100,
+        "height": 710,
+        "bytes": 28884
+      }
+    ]
+  },
+  "/media/projects/stylized-props-cover-20261126.webp": {
+    "width": 1070,
+    "height": 690,
+    "variants": [
+      {
+        "src": "/media/optimized/stylized-props-cover-20261126-8f8beb49ae89-160w.webp",
+        "width": 160,
+        "height": 103,
+        "bytes": 3836
+      },
+      {
+        "src": "/media/optimized/stylized-props-cover-20261126-2ed7a714bae6-320w.webp",
+        "width": 320,
+        "height": 206,
+        "bytes": 10956
+      },
+      {
+        "src": "/media/optimized/stylized-props-cover-20261126-a351d06ee59b-640w.webp",
+        "width": 640,
+        "height": 413,
+        "bytes": 30910
+      },
+      {
+        "src": "/media/optimized/stylized-props-cover-20261126-1fd9ecf92952-960w.webp",
+        "width": 960,
+        "height": 619,
+        "bytes": 53412
+      },
+      {
+        "src": "/media/optimized/stylized-props-cover-20261126-d8ee0d33d658-1070w.webp",
+        "width": 1070,
+        "height": 690,
+        "bytes": 67048
+      }
+    ]
+  },
+  "/media/projects/character-animation-cover-20261126.webp": {
+    "width": 852,
+    "height": 550,
+    "variants": [
+      {
+        "src": "/media/optimized/character-animation-cover-20261126-2d6d11909ada-160w.webp",
+        "width": 160,
+        "height": 103,
+        "bytes": 992
+      },
+      {
+        "src": "/media/optimized/character-animation-cover-20261126-8128d0fd8579-320w.webp",
+        "width": 320,
+        "height": 207,
+        "bytes": 2274
+      },
+      {
+        "src": "/media/optimized/character-animation-cover-20261126-804d5a712f01-640w.webp",
+        "width": 640,
+        "height": 413,
+        "bytes": 4986
+      },
+      {
+        "src": "/media/optimized/character-animation-cover-20261126-ba93be338fa3-852w.webp",
+        "width": 852,
+        "height": 550,
+        "bytes": 7518
+      }
+    ]
+  },
+  "/media/projects/character-rigging-cover-20261126.webp": {
+    "width": 1100,
+    "height": 710,
+    "variants": [
+      {
+        "src": "/media/optimized/character-rigging-cover-20261126-77cd0ddc98f0-160w.webp",
+        "width": 160,
+        "height": 103,
+        "bytes": 1716
+      },
+      {
+        "src": "/media/optimized/character-rigging-cover-20261126-bd6cf01113ee-320w.webp",
+        "width": 320,
+        "height": 207,
+        "bytes": 5744
+      },
+      {
+        "src": "/media/optimized/character-rigging-cover-20261126-bcdafdacde03-640w.webp",
+        "width": 640,
+        "height": 413,
+        "bytes": 20116
+      },
+      {
+        "src": "/media/optimized/character-rigging-cover-20261126-c3918754d7c2-960w.webp",
+        "width": 960,
+        "height": 620,
+        "bytes": 40686
+      },
+      {
+        "src": "/media/optimized/character-rigging-cover-20261126-4f3938deabe5-1100w.webp",
+        "width": 1100,
+        "height": 710,
+        "bytes": 54184
+      }
+    ]
+  },
+  "/media/projects/water-fire-monsters-cover-20261126.webp": {
+    "width": 1100,
+    "height": 710,
+    "variants": [
+      {
+        "src": "/media/optimized/water-fire-monsters-cover-20261126-ff89b8aa171b-160w.webp",
+        "width": 160,
+        "height": 103,
+        "bytes": 4254
+      },
+      {
+        "src": "/media/optimized/water-fire-monsters-cover-20261126-d14064389d3f-320w.webp",
+        "width": 320,
+        "height": 207,
+        "bytes": 13038
+      },
+      {
+        "src": "/media/optimized/water-fire-monsters-cover-20261126-6bfe998bf4fc-640w.webp",
+        "width": 640,
+        "height": 413,
+        "bytes": 38600
+      },
+      {
+        "src": "/media/optimized/water-fire-monsters-cover-20261126-80ec2fbdda6e-960w.webp",
+        "width": 960,
+        "height": 620,
+        "bytes": 70570
+      },
+      {
+        "src": "/media/optimized/water-fire-monsters-cover-20261126-09507835a396-1100w.webp",
+        "width": 1100,
+        "height": 710,
+        "bytes": 89148
+      }
+    ]
+  },
+  "/media/projects/cs2-valorant-cover-20261126.webp": {
+    "width": 688,
+    "height": 444,
+    "variants": [
+      {
+        "src": "/media/optimized/cs2-valorant-cover-20261126-5fd853ac7767-160w.webp",
+        "width": 160,
+        "height": 103,
+        "bytes": 5262
+      },
+      {
+        "src": "/media/optimized/cs2-valorant-cover-20261126-622d68671dd8-320w.webp",
+        "width": 320,
+        "height": 207,
+        "bytes": 20632
+      },
+      {
+        "src": "/media/optimized/cs2-valorant-cover-20261126-bd75908959ce-640w.webp",
+        "width": 640,
+        "height": 413,
+        "bytes": 71292
+      },
+      {
+        "src": "/media/optimized/cs2-valorant-cover-20261126-d9a18f01ead0-688w.webp",
+        "width": 688,
+        "height": 444,
+        "bytes": 81554
+      }
+    ]
+  },
+  "/media/projects/valorant-mobile-cover-20261126.webp": {
+    "width": 1118,
+    "height": 721,
+    "variants": [
+      {
+        "src": "/media/optimized/valorant-mobile-cover-20261126-647c9b9c8bd8-160w.webp",
+        "width": 160,
+        "height": 103,
+        "bytes": 4792
+      },
+      {
+        "src": "/media/optimized/valorant-mobile-cover-20261126-26684f3fb734-320w.webp",
+        "width": 320,
+        "height": 206,
+        "bytes": 14978
+      },
+      {
+        "src": "/media/optimized/valorant-mobile-cover-20261126-ded645dda6fa-640w.webp",
+        "width": 640,
+        "height": 413,
+        "bytes": 49808
+      },
+      {
+        "src": "/media/optimized/valorant-mobile-cover-20261126-9318d5f74035-960w.webp",
+        "width": 960,
+        "height": 619,
+        "bytes": 93628
+      },
+      {
+        "src": "/media/optimized/valorant-mobile-cover-20261126-5feca30b46ae-1118w.webp",
+        "width": 1118,
+        "height": 721,
+        "bytes": 111354
+      }
+    ]
+  },
+  "/media/projects/elemental-magic-cover-20261126.webp": {
+    "width": 753,
+    "height": 486,
+    "variants": [
+      {
+        "src": "/media/optimized/elemental-magic-cover-20261126-4e935895b9e4-160w.webp",
+        "width": 160,
+        "height": 103,
+        "bytes": 5112
+      },
+      {
+        "src": "/media/optimized/elemental-magic-cover-20261126-cf7d917cd78a-320w.webp",
+        "width": 320,
+        "height": 207,
+        "bytes": 14504
+      },
+      {
+        "src": "/media/optimized/elemental-magic-cover-20261126-5941a9175d9f-640w.webp",
+        "width": 640,
+        "height": 413,
+        "bytes": 41868
+      },
+      {
+        "src": "/media/optimized/elemental-magic-cover-20261126-6af59a1b63bf-753w.webp",
+        "width": 753,
+        "height": 486,
+        "bytes": 54492
+      }
+    ]
+  },
+  "/media/games/ace-attorney-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/ace-attorney-thumb-b6fa631fa0be-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 6568
+      },
+      {
+        "src": "/media/optimized/ace-attorney-thumb-79b950549641-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 20820
+      },
+      {
+        "src": "/media/optimized/ace-attorney-thumb-65c5e5d154b4-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 38458
+      }
+    ]
+  },
+  "/media/games/among-us-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/among-us-thumb-6a703b6884bc-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 5344
+      },
+      {
+        "src": "/media/optimized/among-us-thumb-de2a6f33ad1d-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 13350
+      },
+      {
+        "src": "/media/optimized/among-us-thumb-b9ba3434056e-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 21720
+      }
+    ]
+  },
+  "/media/games/apex-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/apex-thumb-db1d0b8e5c19-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 8148
+      },
+      {
+        "src": "/media/optimized/apex-thumb-03aa3bd75beb-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 24714
+      },
+      {
+        "src": "/media/optimized/apex-thumb-17ee52686e80-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 49052
+      }
+    ]
+  },
+  "/media/games/balatro-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/balatro-thumb-db7587e12e91-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 5426
+      },
+      {
+        "src": "/media/optimized/balatro-thumb-606bfbdda49e-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 14630
+      },
+      {
+        "src": "/media/optimized/balatro-thumb-ad0a18c361ac-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 25388
+      }
+    ]
+  },
+  "/media/games/black-myth-wukong-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/black-myth-wukong-thumb-522772bceb83-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 3832
+      },
+      {
+        "src": "/media/optimized/black-myth-wukong-thumb-0287a2a7982e-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 12990
+      },
+      {
+        "src": "/media/optimized/black-myth-wukong-thumb-3ef36112e0ae-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 26246
+      }
+    ]
+  },
+  "/media/games/cs2-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/cs2-thumb-d6f87da57abf-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 3796
+      },
+      {
+        "src": "/media/optimized/cs2-thumb-e947646d868e-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 9002
+      },
+      {
+        "src": "/media/optimized/cs2-thumb-62cc595e0064-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 19446
+      }
+    ]
+  },
+  "/media/games/detroit-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/detroit-thumb-e82a6bef181f-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 4682
+      },
+      {
+        "src": "/media/optimized/detroit-thumb-8a8ef7421b0f-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 14264
+      },
+      {
+        "src": "/media/optimized/detroit-thumb-38d1a6e770ff-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 28224
+      }
+    ]
+  },
+  "/media/games/dread-hunger-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/dread-hunger-thumb-9c5423275820-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 6044
+      },
+      {
+        "src": "/media/optimized/dread-hunger-thumb-73a29bf4441c-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 17514
+      },
+      {
+        "src": "/media/optimized/dread-hunger-thumb-ce85cb39048c-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 31948
+      }
+    ]
+  },
+  "/media/games/fall-guys-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/fall-guys-thumb-129c6a9ac664-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 8148
+      },
+      {
+        "src": "/media/optimized/fall-guys-thumb-0f500c08a2ad-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 22302
+      },
+      {
+        "src": "/media/optimized/fall-guys-thumb-5d120c20ca7b-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 38430
+      }
+    ]
+  },
+  "/media/games/hades-2-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/hades-2-thumb-62b1d6cd0e7e-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 5940
+      },
+      {
+        "src": "/media/optimized/hades-2-thumb-fd98ffeea613-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 17708
+      },
+      {
+        "src": "/media/optimized/hades-2-thumb-cad20d1072cf-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 32698
+      }
+    ]
+  },
+  "/media/games/it-takes-two-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/it-takes-two-thumb-8cf0ca221bb1-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 6342
+      },
+      {
+        "src": "/media/optimized/it-takes-two-thumb-0d092a743ea9-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 18706
+      },
+      {
+        "src": "/media/optimized/it-takes-two-thumb-bdd9e4a78ae8-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 33522
+      }
+    ]
+  },
+  "/media/games/journey-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/journey-thumb-836fea720b04-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 1522
+      },
+      {
+        "src": "/media/optimized/journey-thumb-fb89fd359edd-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 3304
+      },
+      {
+        "src": "/media/optimized/journey-thumb-b0733345d1c8-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 5372
+      }
+    ]
+  },
+  "/media/games/minecraft-thumb.webp": {
+    "width": 570,
+    "height": 321,
+    "variants": [
+      {
+        "src": "/media/optimized/minecraft-thumb-2257ccf5ee5c-180w.webp",
+        "width": 180,
+        "height": 101,
+        "bytes": 8390
+      },
+      {
+        "src": "/media/optimized/minecraft-thumb-775d7083bd70-360w.webp",
+        "width": 360,
+        "height": 203,
+        "bytes": 25526
+      },
+      {
+        "src": "/media/optimized/minecraft-thumb-de8753496e66-540w.webp",
+        "width": 540,
+        "height": 304,
+        "bytes": 45548
+      }
+    ]
+  },
+  "/media/games/overcooked-2-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/overcooked-2-thumb-1980e2f24b43-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 8802
+      },
+      {
+        "src": "/media/optimized/overcooked-2-thumb-5561226cf240-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 23810
+      },
+      {
+        "src": "/media/optimized/overcooked-2-thumb-5145e3e92524-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 41856
+      }
+    ]
+  },
+  "/media/games/phantom-blade-zero-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/phantom-blade-zero-thumb-7c4d5889dc2d-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 3780
+      },
+      {
+        "src": "/media/optimized/phantom-blade-zero-thumb-49217c42705f-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 11958
+      },
+      {
+        "src": "/media/optimized/phantom-blade-zero-thumb-be51976b10e7-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 25512
+      }
+    ]
+  },
+  "/media/games/portal-2-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/portal-2-thumb-dc038a779008-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 1864
+      },
+      {
+        "src": "/media/optimized/portal-2-thumb-247d930ec8aa-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 3528
+      },
+      {
+        "src": "/media/optimized/portal-2-thumb-16256fcf92d2-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 5288
+      }
+    ]
+  },
+  "/media/games/rainbow-six-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/rainbow-six-thumb-58c40215dc57-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 7204
+      },
+      {
+        "src": "/media/optimized/rainbow-six-thumb-9eb8cd3dafa7-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 22728
+      },
+      {
+        "src": "/media/optimized/rainbow-six-thumb-744a7cecdd93-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 44228
+      }
+    ]
+  },
+  "/media/games/roco-world-thumb.webp": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "src": "/media/optimized/roco-world-thumb-23663376ed4a-180w.webp",
+        "width": 180,
+        "height": 101,
+        "bytes": 5686
+      },
+      {
+        "src": "/media/optimized/roco-world-thumb-c50bba2e0b29-360w.webp",
+        "width": 360,
+        "height": 202,
+        "bytes": 15166
+      },
+      {
+        "src": "/media/optimized/roco-world-thumb-3ba3cd40c2df-540w.webp",
+        "width": 540,
+        "height": 304,
+        "bytes": 26824
+      }
+    ]
+  },
+  "/media/games/split-fiction-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/split-fiction-thumb-71134085bda2-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 8758
+      },
+      {
+        "src": "/media/optimized/split-fiction-thumb-484432954536-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 26432
+      },
+      {
+        "src": "/media/optimized/split-fiction-thumb-83e47bc5cd03-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 51252
+      }
+    ]
+  },
+  "/media/games/tft-thumb.webp": {
+    "width": 1200,
+    "height": 675,
+    "variants": [
+      {
+        "src": "/media/optimized/tft-thumb-acf523955acd-180w.webp",
+        "width": 180,
+        "height": 101,
+        "bytes": 4736
+      },
+      {
+        "src": "/media/optimized/tft-thumb-097f6d518c3d-360w.webp",
+        "width": 360,
+        "height": 202,
+        "bytes": 10864
+      },
+      {
+        "src": "/media/optimized/tft-thumb-1eb2120e1985-540w.webp",
+        "width": 540,
+        "height": 304,
+        "bytes": 17230
+      }
+    ]
+  },
+  "/media/games/titanfall-2-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/titanfall-2-thumb-389d563401f2-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 6576
+      },
+      {
+        "src": "/media/optimized/titanfall-2-thumb-389d491a0f16-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 22360
+      },
+      {
+        "src": "/media/optimized/titanfall-2-thumb-ca8acfa3feb1-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 44814
+      }
+    ]
+  },
+  "/media/games/undertale-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/undertale-thumb-2117f8ac9a22-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 1154
+      },
+      {
+        "src": "/media/optimized/undertale-thumb-bbcd9ac4d0ed-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 1880
+      },
+      {
+        "src": "/media/optimized/undertale-thumb-31bef6823af3-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 2164
+      }
+    ]
+  },
+  "/media/games/valorant-thumb.webp": {
+    "width": 1000,
+    "height": 1000,
+    "variants": [
+      {
+        "src": "/media/optimized/valorant-thumb-ae868d02779b-180w.webp",
+        "width": 180,
+        "height": 180,
+        "bytes": 5804
+      },
+      {
+        "src": "/media/optimized/valorant-thumb-330c490a72fb-360w.webp",
+        "width": 360,
+        "height": 360,
+        "bytes": 17024
+      },
+      {
+        "src": "/media/optimized/valorant-thumb-8a873ab25125-540w.webp",
+        "width": 540,
+        "height": 540,
+        "bytes": 30602
+      }
+    ]
+  },
+  "/media/games/we-were-here-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/we-were-here-thumb-a74e4c073c71-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 6370
+      },
+      {
+        "src": "/media/optimized/we-were-here-thumb-7389126bbd47-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 18276
+      },
+      {
+        "src": "/media/optimized/we-were-here-thumb-c4b23b037241-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 32586
+      }
+    ]
+  },
+  "/media/games/yangtze-river-thumb.webp": {
+    "width": 616,
+    "height": 353,
+    "variants": [
+      {
+        "src": "/media/optimized/yangtze-river-thumb-975404d2b7fa-180w.webp",
+        "width": 180,
+        "height": 103,
+        "bytes": 5188
+      },
+      {
+        "src": "/media/optimized/yangtze-river-thumb-8edcd26b037b-360w.webp",
+        "width": 360,
+        "height": 206,
+        "bytes": 15868
+      },
+      {
+        "src": "/media/optimized/yangtze-river-thumb-921a2a67e63f-540w.webp",
+        "width": 540,
+        "height": 309,
+        "bytes": 29328
+      }
+    ]
+  },
+  "/media/games/yimeng-jianghu-thumb.webp": {
+    "width": 1200,
+    "height": 610,
+    "variants": [
+      {
+        "src": "/media/optimized/yimeng-jianghu-thumb-8dd1061cd289-180w.webp",
+        "width": 180,
+        "height": 92,
+        "bytes": 3942
+      },
+      {
+        "src": "/media/optimized/yimeng-jianghu-thumb-ba1100b2162a-360w.webp",
+        "width": 360,
+        "height": 183,
+        "bytes": 11630
+      },
+      {
+        "src": "/media/optimized/yimeng-jianghu-thumb-401f56957066-540w.webp",
+        "width": 540,
+        "height": 274,
+        "bytes": 21312
+      }
+    ]
+  },
+  "/media/portrait.webp": {
+    "width": 750,
+    "height": 1000,
+    "variants": [
+      {
+        "src": "/media/optimized/portrait-c7249ea4e729-320w.webp",
+        "width": 320,
+        "height": 427,
+        "bytes": 20476
+      },
+      {
+        "src": "/media/optimized/portrait-6d80382fb514-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 35086
+      },
+      {
+        "src": "/media/optimized/portrait-d23555904c00-750w.webp",
+        "width": 750,
+        "height": 1000,
+        "bytes": 74628
+      }
+    ]
+  }
+}
