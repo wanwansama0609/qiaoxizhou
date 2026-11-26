@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { JSDOM, VirtualConsole } from 'jsdom';
 import { builtAppScript } from './built-app.mjs';
+import { LANGUAGE_STORAGE_KEY } from '../src/localization.js';
 
 const wait = (ms = 45) => new Promise(resolve => setTimeout(resolve, ms));
 async function until(check) {
@@ -11,10 +12,12 @@ async function until(check) {
 }
 const order = ['one-more-move', 'neon-alley', 'potion-shop-sign', 'sci-fi-blaster', 'stylized-props', 'time-puzzle', 'infiltration', 'cs2-valorant', 'valorant-mobile', 'character-animation', 'character-rigging', 'elemental-magic', 'water-fire-monsters'];
 
-async function setup() {
+async function setup({ language, legacyLanguage } = {}) {
   const errors = []; const console = new VirtualConsole(); console.on('jsdomError', error => errors.push(error));
   const dom = new JSDOM('<html><head></head><body><div id="root"></div></body></html>', { url: 'http://localhost:5173/', runScripts: 'outside-only', pretendToBeVisual: true, virtualConsole: console });
   const w = dom.window; const document = w.document;
+  if (language) w.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+  if (legacyLanguage) w.localStorage.setItem('qz-language', legacyLanguage);
   const preferences = { reduced: false }; const queries = new Map(); const observers = [];
   w.matchMedia = query => {
     if (!queries.has(query)) {
@@ -55,6 +58,8 @@ test('all-project reel previews every project in order, loops, and pauses approp
   const p = await setup(); const { document, root, reelTimers, inView, tick, pointer, w } = p;
   try {
     assert.equal(document.querySelector('.edit-projects'), null);
+    assert.equal(document.documentElement.lang, 'en');
+    assert.equal(document.querySelector('.contact-star'), null);
     assert.equal(document.querySelector('.showcase-play, .showcase-arrows'), null);
     const slider = document.querySelector('.showcase-slider');
     assert.equal(slider.type, 'range');
@@ -80,7 +85,7 @@ test('all-project reel previews every project in order, loops, and pauses approp
     }
     document.querySelector('.hero-project').focus(); await until(() => root().dataset.playing === 'true'); assert.equal(root().dataset.playing, 'true');
     document.querySelector('.showcase-card.is-current').click(); await wait();
-    assert.equal(document.querySelector('#dialog-title').textContent, '霓虹巷道：赛博朋克场景'); assert.equal(reelTimers.size, 0, 'Modal pauses');
+    assert.equal(document.querySelector('#dialog-title').textContent, 'Neon Alley: Cyberpunk Environment'); assert.equal(reelTimers.size, 0, 'Modal pauses');
     document.querySelector('dialog .icon-button').click(); await wait();
     document.querySelector('.hero-project').focus(); await wait();
     Object.defineProperty(document, 'hidden', { value: true, configurable: true }); document.dispatchEvent(new w.Event('visibilitychange')); await wait(); assert.equal(reelTimers.size, 0);
@@ -88,6 +93,25 @@ test('all-project reel previews every project in order, loops, and pauses approp
     inView(false); await wait(); assert.equal(reelTimers.size, 0);
     assert.deepEqual(p.errors, []);
   } finally { p.dom.window.close(); }
+});
+
+test('initial language is English despite the old default, and new language choices survive reload', async () => {
+  const p = await setup({ legacyLanguage: 'zh' });
+  let chosen;
+  try {
+    assert.equal(p.document.documentElement.lang, 'en');
+    assert.equal(p.document.title, 'Qiaoxi Zhou — Game Design & Development');
+    assert.equal(p.document.querySelector('.contact-star'), null);
+    assert.doesNotMatch(p.document.querySelector('#contact-title').textContent, /✳/);
+    p.document.querySelector('.language-switch').click(); await wait();
+    assert.equal(p.document.documentElement.lang, 'zh-CN');
+    chosen = p.w.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+    assert.equal(chosen, 'zh');
+    assert.equal(p.document.querySelector('#contact-title').textContent, '保持联系。');
+  } finally { p.dom.window.close(); }
+  const revisited = await setup({ language: chosen });
+  try { assert.equal(revisited.document.documentElement.lang, 'zh-CN'); }
+  finally { revisited.dom.window.close(); }
 });
 
 test('manual preview, swipe, reduced motion and category switching retain working project links', async () => {

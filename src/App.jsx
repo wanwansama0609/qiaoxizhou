@@ -4,7 +4,7 @@ import { profile, projects, experiences, skills, categories, isProjectInCategory
 import ProjectGallery, { ProjectVisual } from './ProjectGallery';
 import ProjectTools, { SkillTools } from './ProjectTools';
 import FavoriteGamesSection from './FavoriteGamesSection.jsx';
-import { projectTitle, translateTerm } from './localization.js';
+import { LANGUAGE_STORAGE_KEY, projectTitle, translateTerm } from './localization.js';
 import { AccentText, HeroAtmosphere, HeroTilt, Reveal, SkillSpotlight } from './effects/PortfolioMotion.jsx';
 
 function projectCategoryOrder(project) {
@@ -72,7 +72,7 @@ function ProjectDialog({ project, t, onClose }) {
 }
 
 export default function App() {
-  const [language, setLanguage] = useState(() => { try { return localStorage.getItem('qz-language') === 'en' ? 'en' : 'zh'; } catch { return 'zh'; } });
+  const [language, setLanguage] = useState(() => { try { return localStorage.getItem(LANGUAGE_STORAGE_KEY) === 'zh' ? 'zh' : 'en'; } catch { return 'en'; } });
   const [active, setActive] = useState('home');
   const [menuOpen, setMenuOpen] = useState(false);
   const [filter, setFilter] = useState('all');
@@ -108,7 +108,7 @@ export default function App() {
     document.title = t('周巧兮 — 游戏设计与开发', 'Qiaoxi Zhou — Game Design & Development');
     const description = document.querySelector('meta[name="description"]');
     if (description) description.content = t('周巧兮的个人作品集：游戏设计与开发、关卡设计、3D 美术、动画与绑定和游戏分析。', 'Qiaoxi Zhou’s portfolio of game design and development, level design, 3D art, animation, rigging, and game analysis.');
-    try { localStorage.setItem('qz-language', language); } catch { /* Browser storage may be disabled. */ }
+    try { localStorage.setItem(LANGUAGE_STORAGE_KEY, language); } catch { /* Browser storage may be disabled. */ }
   }, [language]);
 
   useEffect(() => {
@@ -184,7 +184,7 @@ export default function App() {
 
       <FavoriteGamesSection t={t} />
 
-      <section className="contact" id="contact" aria-labelledby="contact-title"><div className="contact-orbit" aria-hidden="true" /><div className="container contact-inner"><SectionLabel number="05">{t('保持联系 / 联系我', 'LET’S CONNECT / THE NEXT CHAPTER')}</SectionLabel><div className="contact-main"><div className="contact-kicker"><span className="status-dot" /><span className="mono">{t("欢迎交流", "ALWAYS UP FOR A CONVERSATION")}</span></div><h2 id="contact-title">{t("保持", "LET’S")}<br /><em>{t("联系。", "CONNECT.")}</em><span className="contact-star" aria-hidden="true">✳</span></h2><p>{t('聊聊游戏，交流想法，或给我的作品一些建议。', 'Talk games, exchange ideas, or share some feedback on my projects.')}</p><div className="contact-email-row"><a className="contact-email" href={`mailto:${profile.email}`}>{profile.email}<ArrowUpRight /></a><button className="copy-button" onClick={copyEmail} aria-label={t('复制邮箱地址', 'Copy email address')}>{copied ? <Check size={19} /> : <Copy size={19} />}</button></div><div className="copy-feedback" role="status">{copied ? t('邮箱已复制', 'Email address copied') : copyError ? t('请选中上方邮箱地址手动复制。', 'Please select and copy the email address above.') : ''}</div><div className="social-links"><a href={profile.artstation} target="_blank" rel="noreferrer">ARTSTATION<ArrowUpRight size={14} /></a><a href={profile.itch} target="_blank" rel="noreferrer">ITCH.IO<ArrowUpRight size={14} /></a><a href={profile.bilibili} target="_blank" rel="noreferrer"><span>{t("哔哩哔哩", "BILIBILI")}{t("（中国的主流视频网站）", " (a mainstream video platform in China)")}</span><ArrowUpRight size={14} /></a><a href="tel:+18158307679">{profile.phone}<ArrowUpRight size={14} /></a></div></div><footer className="footer"><a className="footer-brand" href="#home"><Mark /><span>{t("周巧兮", "QIAOXI ZHOU")}</span></a><span className="mono">© {new Date().getFullYear()} {t("周巧兮 · 游戏设计。", "QIAOXI ZHOU · GAME DESIGN.")}</span><a className="back-top" href="#home">{t('回到顶部', 'Back to top')}<ArrowUp size={16} /></a></footer></div></section>
+      <section className="contact" id="contact" aria-labelledby="contact-title"><div className="contact-orbit" aria-hidden="true" /><div className="container contact-inner"><SectionLabel number="05">{t('保持联系 / 联系我', 'LET’S CONNECT / THE NEXT CHAPTER')}</SectionLabel><div className="contact-main"><div className="contact-kicker"><span className="status-dot" /><span className="mono">{t("欢迎交流", "ALWAYS UP FOR A CONVERSATION")}</span></div><h2 id="contact-title">{t("保持", "LET’S")}<br /><em>{t("联系。", "CONNECT.")}</em></h2><p>{t('聊聊游戏，交流想法，或给我的作品一些建议。', 'Talk games, exchange ideas, or share some feedback on my projects.')}</p><div className="contact-email-row"><a className="contact-email" href={`mailto:${profile.email}`}>{profile.email}<ArrowUpRight /></a><button className="copy-button" onClick={copyEmail} aria-label={t('复制邮箱地址', 'Copy email address')}>{copied ? <Check size={19} /> : <Copy size={19} />}</button></div><div className="copy-feedback" role="status">{copied ? t('邮箱已复制', 'Email address copied') : copyError ? t('请选中上方邮箱地址手动复制。', 'Please select and copy the email address above.') : ''}</div><div className="social-links"><a href={profile.artstation} target="_blank" rel="noreferrer">ARTSTATION<ArrowUpRight size={14} /></a><a href={profile.itch} target="_blank" rel="noreferrer">ITCH.IO<ArrowUpRight size={14} /></a><a href={profile.bilibili} target="_blank" rel="noreferrer"><span>{t("哔哩哔哩", "BILIBILI")}{t("（中国的主流视频网站）", " (a mainstream video platform in China)")}</span><ArrowUpRight size={14} /></a><a href="tel:+18158307679">{profile.phone}<ArrowUpRight size={14} /></a></div></div><footer className="footer"><a className="footer-brand" href="#home"><Mark /><span>{t("周巧兮", "QIAOXI ZHOU")}</span></a><span className="mono">© {new Date().getFullYear()} {t("周巧兮 · 游戏设计。", "QIAOXI ZHOU · GAME DESIGN.")}</span><a className="back-top" href="#home">{t('回到顶部', 'Back to top')}<ArrowUp size={16} /></a></footer></div></section>
     </main>
     {selected && <ProjectDialog project={selected} t={t} onClose={() => setSelected(null)} />}
   </>;

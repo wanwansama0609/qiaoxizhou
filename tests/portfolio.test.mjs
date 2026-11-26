@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { JSDOM, VirtualConsole } from 'jsdom';
 import { projects, profile, skills, categories } from '../src/content.js';
-import { projectTitlesZh, translateTerm } from '../src/localization.js';
+import { LANGUAGE_STORAGE_KEY, projectTitlesZh, translateTerm } from '../src/localization.js';
 import { favoriteGames } from '../src/favoriteGames.js';
 import { builtAppScript } from './built-app.mjs';
 
@@ -20,6 +20,7 @@ test('Portfolio interactions and content', async t => {
   });
   const { window } = dom;
   const { document } = window;
+  window.localStorage.setItem(LANGUAGE_STORAGE_KEY, 'zh');
   let clipboard = '';
   const media = JSON.parse(readFileSync(new URL('../public/content/project-media.json', import.meta.url), 'utf8'));
   window.fetch = async () => ({ ok: true, json: async () => media });
@@ -177,7 +178,7 @@ test('Portfolio interactions and content', async t => {
     await t.test('language switches the interface and persists the choice', async () => {
       await click(document.querySelector('.language-switch'));
       assert.equal(document.documentElement.lang, 'en');
-      assert.equal(window.localStorage.getItem('qz-language'), 'en');
+      assert.equal(window.localStorage.getItem(LANGUAGE_STORAGE_KEY), 'en');
       assert.match(document.querySelector('.hero-intro').textContent, /QIAOXI ZHOU/);
       assert.match(document.querySelector('#about').textContent, /competitive games/);
       assert.equal(document.querySelector('[data-game-id="valorant"] h4').textContent, 'VALORANT');
@@ -192,10 +193,10 @@ test('Portfolio interactions and content', async t => {
         'work-title': ['精选作品。', 'SELECTEDWORK.'],
         'approach-title': ['我的技能。', 'MYTOOLBOX.'],
         'games-title': ['喜欢的游戏。', 'GAMESILOVE.'],
-        'contact-title': ['保持联系。✳', 'LET’SCONNECT.✳'],
+        'contact-title': ['保持联系。', 'LET’SCONNECT.'],
       };
       for (const [index, language] of ['zh', 'en'].entries()) {
-        if (window.localStorage.getItem('qz-language') !== language) await click(document.querySelector('.language-switch'));
+        if (window.localStorage.getItem(LANGUAGE_STORAGE_KEY) !== language) await click(document.querySelector('.language-switch'));
         assert.equal(document.documentElement.lang, language === 'zh' ? 'zh-CN' : 'en');
         for (const [id, text] of Object.entries(expectedHeadings)) assert.equal(document.getElementById(id).textContent.replace(/\s/g, ''), text[index], id);
         assert.equal(document.title, index ? 'Qiaoxi Zhou — Game Design & Development' : '周巧兮 — 游戏设计与开发');

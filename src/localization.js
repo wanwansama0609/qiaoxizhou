@@ -1,3 +1,7 @@
+// The previous key also stored the old automatic Chinese default. Start this
+// version in English, then remember choices made with the language switch.
+export const LANGUAGE_STORAGE_KEY = 'qz-language-v2';
+
 export const projectTitlesZh = {
   'one-more-move': '未落定',
   'time-puzzle': '昼夜切换解谜关卡',
