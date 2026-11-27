@@ -57,7 +57,7 @@ test('Portfolio interactions and content', async t => {
       const socialLinks = document.querySelectorAll('#contact .social-links a');
       assert.equal(socialLinks[0].getAttribute('href'), 'https://www.artstation.com/wanwansama');
       assert.equal(socialLinks[1].getAttribute('href'), 'https://josiez.itch.io/');
-      assert.match(socialLinks[2].textContent, /哔哩哔哩（中国的主流视频网站）/);
+      assert.equal(socialLinks[2].textContent, '哔哩哔哩');
       assert.equal(document.querySelectorAll('.project-card').length, projects.length);
       assert.equal(projects.length, 13);
       assert.deepEqual(projects.map(project => project.number), projects.map((_, index) => String(index + 1).padStart(2, '0')));

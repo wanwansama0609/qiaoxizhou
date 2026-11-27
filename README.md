@@ -67,6 +67,12 @@ pnpm preview
 
 ## 素材与第三方代码
 
+### 鼠标和网站图标
+
+桌面鼠标采用增强版 React Bits [Target Cursor](https://reactbits.dev/animations/target-cursor)：44px 紫色准星，12px 发光四角，悬停链接和按钮时展开框选并变成粉紫色，点击时出现短促扩散光环。项目详情弹窗使用相同效果，指针直接渲染在弹窗层内，避免被遮挡；文字输入、滑动条和触屏保留原生操作。减少动画模式会关闭效果，切到后台或键盘导航时停止指针动画。参数在 `src/effects/PortfolioCursor.jsx`，光晕与点击反馈样式在 `src/effects/reactbits/TargetCursor.css`。
+
+左上角、页脚和标签页共用 `public/favicon.svg` 中的像素手柄图标。只需修改这一份文件即可保持一致；更新图标后递增 `src/App.jsx`、`index.html` 和 `games.html` 中的版本参数，避免浏览器继续显示缓存图标。
+
 ### 图片加载优化
 
 网页按显示大小和屏幕像素密度选择预览图：项目卡片、首页、轮播缩略条和游戏小图使用不同尺寸。原始图片没有改写，项目详情继续使用原图；优化图加载失败时会退回原图。

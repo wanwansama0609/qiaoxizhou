@@ -101,7 +101,7 @@ export default function ProjectShowcase({ items, t, onSelect, suspended = false 
       {items.map((project, index) => {
         const offset = distanceFrom(index, active, items.length); const depth = Math.abs(offset);
         return <ProjectCard key={project.id} project={project} t={t} onSelect={onSelect} imageSizeHint="showcase" className={`showcase-card ${index === active ? 'is-current' : ''}`}
-          tabIndex={index === active ? 0 : -1} aria-hidden={index !== active}
+          tabIndex={index === active ? 0 : -1} aria-hidden={index !== active} data-cursor-lock={index === active ? undefined : 'false'}
           style={{ '--slide-x': `${offset * 72}%`, '--slide-angle': `${-offset * 10}deg`, '--slide-depth': `${-Math.min(depth, 3) * 170}px`, '--slide-scale': depth ? Math.max(0.7, 1 - depth * 0.12) : 1, opacity: depth === 0 ? 1 : depth === 1 ? 0.38 : 0, visibility: depth > 1 ? 'hidden' : 'visible', zIndex: items.length - depth }} />;
       })}
     </div>

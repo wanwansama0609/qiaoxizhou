@@ -7,6 +7,7 @@ import FavoriteGamesSection from './FavoriteGamesSection.jsx';
 import { LANGUAGE_STORAGE_KEY, projectTitle, translateTerm } from './localization.js';
 import { AccentText, HeroAtmosphere, HeroTilt, Reveal, SkillSpotlight } from './effects/PortfolioMotion.jsx';
 import ResponsiveImage from './ResponsiveImage.jsx';
+import PortfolioCursor from './effects/PortfolioCursor.jsx';
 import savedProjectMedia from 'virtual:portfolio-media';
 
 function projectCategoryOrder(project) {
@@ -14,7 +15,7 @@ function projectCategoryOrder(project) {
 }
 
 function Mark({ className = '' }) {
-  return <svg className={`brand-mark ${className}`} viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M6 7h26v20H18v8H6z" stroke="currentColor" strokeWidth="2" /><path d="m23 22 12 13" stroke="currentColor" strokeWidth="2" /></svg>;
+  return <img className={`brand-mark ${className}`} src="/favicon.svg?v=gamepad-1" width="40" height="40" alt="" aria-hidden="true" />;
 }
 
 function SectionLabel({ number, children }) {
@@ -57,6 +58,7 @@ function ProjectDialog({ project, t, onClose }) {
   }, []);
 
   return <dialog ref={dialogRef} className="project-dialog" onCancel={e => { e.preventDefault(); onClose(); }} onClick={e => { if (e.target === e.currentTarget) onClose(); }} aria-labelledby="dialog-title">
+    <PortfolioCursor container={dialogRef} />
     <div className="dialog-shell"><div className="dialog-top"><span className="mono">{project.year}</span><button className="icon-button" onClick={onClose} aria-label={t('关闭项目详情', 'Close project details')}><X size={22} /></button></div>
       <div className="dialog-cover"><ProjectVisual project={project} t={t} /></div>
       <div className="dialog-body"><span className="project-type mono">{t(...project.type)}</span><h2 id="dialog-title">{projectTitle(project, t)}</h2><p className="dialog-intro">{t(...project.intro)}</p>
@@ -143,6 +145,7 @@ export default function App() {
   }
 
   return <>
+    <PortfolioCursor disabled={Boolean(selected)} />
     <a className="skip-link" href="#main">{t('跳转到主要内容', 'Skip to content')}</a>
     <header className={`site-header ${scrolled || menuOpen ? 'is-scrolled' : ''}`}>
       <div className="container header-inner"><a className="brand" href="#home" aria-label={t("周巧兮 — 首页", "Qiaoxi Zhou — Home")}><Mark /><span>{t("周巧兮", "QIAOXI ZHOU")}<small>{t("游戏设计", "GAME DESIGN")}</small></span></a>
@@ -187,7 +190,7 @@ export default function App() {
 
       <FavoriteGamesSection t={t} />
 
-      <section className="contact" id="contact" aria-labelledby="contact-title"><div className="contact-orbit" aria-hidden="true" /><div className="container contact-inner"><SectionLabel number="05">{t('保持联系 / 联系我', 'LET’S CONNECT / THE NEXT CHAPTER')}</SectionLabel><div className="contact-main"><div className="contact-kicker"><span className="status-dot" /><span className="mono">{t("欢迎交流", "ALWAYS UP FOR A CONVERSATION")}</span></div><h2 id="contact-title">{t("保持", "LET’S")}<br /><em>{t("联系。", "CONNECT.")}</em></h2><p>{t('聊聊游戏，交流想法，或给我的作品一些建议。', 'Talk games, exchange ideas, or share some feedback on my projects.')}</p><div className="contact-email-row"><a className="contact-email" href={`mailto:${profile.email}`}>{profile.email}<ArrowUpRight /></a><button className="copy-button" onClick={copyEmail} aria-label={t('复制邮箱地址', 'Copy email address')}>{copied ? <Check size={19} /> : <Copy size={19} />}</button></div><div className="copy-feedback" role="status">{copied ? t('邮箱已复制', 'Email address copied') : copyError ? t('请选中上方邮箱地址手动复制。', 'Please select and copy the email address above.') : ''}</div><div className="social-links"><a href={profile.artstation} target="_blank" rel="noreferrer">ARTSTATION<ArrowUpRight size={14} /></a><a href={profile.itch} target="_blank" rel="noreferrer">ITCH.IO<ArrowUpRight size={14} /></a><a href={profile.bilibili} target="_blank" rel="noreferrer"><span>{t("哔哩哔哩", "BILIBILI")}{t("（中国的主流视频网站）", " (a mainstream video platform in China)")}</span><ArrowUpRight size={14} /></a><a href="tel:+18158307679">{profile.phone}<ArrowUpRight size={14} /></a></div></div><footer className="footer"><a className="footer-brand" href="#home"><Mark /><span>{t("周巧兮", "QIAOXI ZHOU")}</span></a><span className="mono">© {new Date().getFullYear()} {t("周巧兮 · 游戏设计。", "QIAOXI ZHOU · GAME DESIGN.")}</span><a className="back-top" href="#home">{t('回到顶部', 'Back to top')}<ArrowUp size={16} /></a></footer></div></section>
+      <section className="contact" id="contact" aria-labelledby="contact-title"><div className="contact-orbit" aria-hidden="true" /><div className="container contact-inner"><SectionLabel number="05">{t('保持联系 / 联系我', 'LET’S CONNECT / THE NEXT CHAPTER')}</SectionLabel><div className="contact-main"><div className="contact-kicker"><span className="status-dot" /><span className="mono">{t("欢迎交流", "ALWAYS UP FOR A CONVERSATION")}</span></div><h2 id="contact-title">{t("保持", "LET’S")}<br /><em>{t("联系。", "CONNECT.")}</em></h2><p>{t('聊聊游戏，交流想法，或给我的作品一些建议。', 'Talk games, exchange ideas, or share some feedback on my projects.')}</p><div className="contact-email-row"><a className="contact-email" href={`mailto:${profile.email}`}>{profile.email}<ArrowUpRight /></a><button className="copy-button" onClick={copyEmail} aria-label={t('复制邮箱地址', 'Copy email address')}>{copied ? <Check size={19} /> : <Copy size={19} />}</button></div><div className="copy-feedback" role="status">{copied ? t('邮箱已复制', 'Email address copied') : copyError ? t('请选中上方邮箱地址手动复制。', 'Please select and copy the email address above.') : ''}</div><div className="social-links"><a href={profile.artstation} target="_blank" rel="noreferrer">ARTSTATION<ArrowUpRight size={14} /></a><a href={profile.itch} target="_blank" rel="noreferrer">ITCH.IO<ArrowUpRight size={14} /></a><a href={profile.bilibili} target="_blank" rel="noreferrer"><span>{t("哔哩哔哩", "BILIBILI")}{t("", " (a mainstream video platform in China)")}</span><ArrowUpRight size={14} /></a><a href="tel:+18158307679">{profile.phone}<ArrowUpRight size={14} /></a></div></div><footer className="footer"><a className="footer-brand" href="#home"><Mark /><span>{t("周巧兮", "QIAOXI ZHOU")}</span></a><span className="mono">© {new Date().getFullYear()} {t("周巧兮 · 游戏设计。", "QIAOXI ZHOU · GAME DESIGN.")}</span><a className="back-top" href="#home">{t('回到顶部', 'Back to top')}<ArrowUp size={16} /></a></footer></div></section>
     </main>
     {selected && <ProjectDialog project={selected} t={t} onClose={() => setSelected(null)} />}
   </>;

@@ -54,9 +54,9 @@ export function Reveal({ children, className = '', distance = 16, ...props }) {
 
 export function HeroTilt({ children }) {
   const { reduced, finePointer } = useMotionSettings();
-  return <div className="hero-project-slot"><TiltedCard
+  return <div className="hero-project-slot" data-cursor-anchor><TiltedCard
     className="hero-project-motion" containerWidth="100%" containerHeight="auto" imageWidth="100%" imageHeight="auto"
-    rotateAmplitude={4} scaleOnHover={1.012} perspective={1000} smoothness={0.35}
+    rotateAmplitude={0} scaleOnHover={1} perspective={1000} smoothness={0.35}
     glare={0.08} glareColor="#f6b3ed" shadow={0} parallax={0} radius={0}
     showTooltip={false} flipOnClick={false} gyroscope={false} intro={false} floating={false}
     disabled={reduced || !finePointer}

@@ -1,0 +1,83 @@
+.target-cursor {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.target-cursor__corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: var(--target-cursor-color, #ffffff);
+  transform-origin: 0 0;
+  will-change: transform;
+  filter: drop-shadow(0 0 3px #c889ff) drop-shadow(0 0 8px #bc70ff99) drop-shadow(0 1px 1px #100a18);
+}
+
+.target-cursor__dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: var(--target-cursor-color, #ffffff);
+  will-change: transform;
+  box-shadow: 0 0 0 1px #291436, 0 0 7px #f9d5ff, 0 0 16px #cc7cffb3;
+}
+
+.target-cursor__core-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--target-cursor-color, #d4b0ff);
+  border-radius: 50%;
+  opacity: .55;
+  box-shadow: 0 0 8px #bd72ff66, inset 0 0 6px #bd72ff33;
+  will-change: transform;
+  transition: opacity .16s;
+}
+
+.target-cursor[data-locked='true'] .target-cursor__core-ring { opacity: .9; }
+.target-cursor[data-locked='true'] .target-cursor__corner {
+  filter: drop-shadow(0 0 4px #ffd9fc) drop-shadow(0 0 11px #f36de0b3) drop-shadow(0 1px 1px #100a18);
+}
+
+.target-cursor__ripple {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #ffaff1;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #ef78f199, inset 0 0 9px #bd72ff66;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.target-cursor__ripple.is-active { animation: cursor-click-pulse .48s cubic-bezier(.16, 1, .3, 1) both; }
+@keyframes cursor-click-pulse {
+  from { transform: translate(-50%, -50%) scale(.25); opacity: .95; }
+  to { transform: translate(-50%, -50%) scale(1.7); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce), (hover: none), (pointer: coarse) {
+  .target-cursor { display: none; }
+  .target-cursor__ripple.is-active { animation: none; }
+}
+
+.target-cursor__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--target-cursor-color, #ffffff);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  opacity: 0;
+  will-change: transform, opacity;
+}
