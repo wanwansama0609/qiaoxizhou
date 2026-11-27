@@ -178,7 +178,6 @@
   .skill-card-top .mono { font-size: 11px; color: #a485b4; }
   .skill-title { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
   .skill-title h3 { font-size: 21px; font-weight: 550; letter-spacing: -.025em; }
-  .skill-title > .mono { font-size: 11px; color: #9872ab; text-transform: uppercase; }
   .skill-card p { font-size: 12px; line-height: 1.85; color: #ac97b9; margin-block: 14px 22px; }
   .skill-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
   .skill-tools span { font: 11px var(--mono); color: #d1b6de; background: #ca7cde08; border: 1px solid #d698e630; padding: 7px 9px; }
@@ -267,7 +266,6 @@
     .main-nav { gap: 26px; }
     .skill-card { padding: 24px; }
     .skill-title { display: block; }
-    .skill-title > .mono { display: block; margin-top: 6px; }
   }
   @media (max-width: 1000px) {
     .container { width: calc(100% - 60px); }
@@ -382,7 +380,6 @@
     .skills-grid { grid-template-columns: 1fr; gap: 14px; }
     .skill-card { padding: 25px; }
     .skill-title { display: flex; }
-    .skill-title > .mono { margin-top: 0; }
     .skill-card p { margin-bottom: 20px; }
     .certificate-note { flex-wrap: wrap; gap: 12px; font-size: 11px; }
     .certificate-note > .mono:first-child { width: 100%; }
